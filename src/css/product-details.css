@@ -1,0 +1,33 @@
+.installation-frame { border-radius: 24px; touch-action: pan-y; }
+.installation-frame img { user-select: none; }
+.installation-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.installation-controls [role='status'] { text-align: center; color: var(--color-text-secondary); font-size: 12px; }
+.installation-caption { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 12px; font-size: 11px; }
+.installation-caption a { color: var(--color-accent); display: inline-flex; align-items: center; min-height: 44px; gap: 8px; }
+.installation-error { min-height: 18px; margin: 0; font-size: 12px; }
+.included-note { font-size: 13px; line-height: 1.7; }
+.included-note strong { color: var(--color-text-primary); font-weight: 500; }
+.product-use { padding-block: 40px 96px; }
+.use-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.use-steps li { border-top: 1px solid #d9e5f3; padding-top: 24px; }
+.step-index { display: block; font-size: 12px; color: var(--color-accent); margin-bottom: 28px; }
+.use-steps h3 { font-size: 28px; margin-bottom: 20px; }
+.use-steps p { font-size: 15px; line-height: 1.75; margin-bottom: 0; }
+.product-questions { max-width: 800px; padding-bottom: 112px; }
+.product-questions h2 { margin-bottom: 36px; }
+.product-questions details { border-top: var(--border); padding: 4px 0; }
+.product-questions details:last-child { border-bottom: var(--border); }
+.product-questions summary { cursor: pointer; padding: 20px 8px 20px 0; font-size: 16px; font-weight: 500; }
+.product-questions details p { font-size: 15px; padding: 0 24px 8px 0; line-height: 1.75; }
+.product-questions a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+.product-purchase { margin-top: 24px; }
+.product-purchase .button { display: flex; width: 100%; max-width: 260px; min-height: 68px; }
+.product-purchase .marketplace-note { font-size: 11px; min-height: 4.8em; margin: 12px 0 0; line-height: 1.6; }
+.product-purchase .text-link { margin-top: 8px; }
+@media (max-width: 767px) {
+  .use-steps { grid-template-columns: 1fr; gap: 32px; }
+  .product-use { padding-block: 16px 64px; }
+  .product-questions { padding-bottom: 72px; }
+  .installation-caption { align-items: start; gap: 8px; }
+  .installation-caption > span { padding-top: 12px; max-width: 135px; }
+}

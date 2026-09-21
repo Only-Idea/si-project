@@ -1,0 +1,12 @@
+/* Content has no hidden initial state: JavaScript and motion are optional. */
+.reading-progress { position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; pointer-events: none; }
+.reading-progress > span, .chapter-progress > span { display: block; width: 100%; height: 100%; background: var(--color-accent); transform-origin: left center; }
+.chapter-progress { display: block; width: 120px; height: 1px; margin-top: 28px; background: #c5dcf4; }
+.chapter-number { transition: color .45s ease; }
+.is-current .chapter-number { color: var(--color-accent); }
+@media (max-width: 768px) { .chapter-progress { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  /* ScrollTrigger may restore an inline smooth-scroll style during refresh. */
+  html, body { scroll-behavior: auto !important; }
+  .reading-progress, .chapter-progress { display: none; }
+}

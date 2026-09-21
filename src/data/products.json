@@ -1,0 +1,207 @@
+[
+  {
+    "id": "line-holder",
+    "name": "Masonry line holder",
+    "category": "tools",
+    "material": "ABS",
+    "description": "Keep your guide line in position for paving and brickwork. The 3D-printed holder clamps onto a rod with a hand-tightened adjustment knob.",
+    "note": "Printed in ABS with steel clamping hardware. Includes one holder and an M8 screw with adjustment knob.",
+    "listedFinish": "Orange",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "ABS"
+      },
+      {
+        "label": "Rod diameter",
+        "value": "Up to 24 mm"
+      },
+      {
+        "label": "Line adjustment",
+        "value": "0–75 mm"
+      },
+      {
+        "label": "Dimensions",
+        "value": "91 × 79 × 40 mm"
+      },
+      {
+        "label": "Clamping hardware",
+        "value": "Steel M8 screw & nut"
+      }
+    ],
+    "marketplaces": [
+      {
+        "name": "Allegro",
+        "colorId": "orange",
+        "url": "https://allegro.pl/produkt/uchwyt-do-sznurka-brukarskiego-murarskiego-na-pret-24mm-pomaranczowy-5dd871ee-d86b-47d1-b6f1-987c19a1ca86?offerId=18883894172"
+      },
+      {
+        "name": "Allegro",
+        "colorId": "green",
+        "url": "https://allegro.pl/produkt/uchwyt-do-sznurka-brukarskiego-murarskiego-na-pret-24mm-zielony-23a646d4-66d8-4889-8528-75037a67eb73?offerId=18881264719"
+      },
+      {
+        "name": "Allegro",
+        "colorId": "blue",
+        "url": "https://allegro.pl/produkt/uchwyt-do-sznurka-brukarskiego-murarskiego-na-pret-24mm-niebieski-7af48e12-6d10-4a05-b338-e234326e6ec6?offerId=18883876669"
+      },
+      {
+        "name": "Allegro Lokalnie",
+        "colorId": "black",
+        "url": "https://allegrolokalnie.pl/oferta/uchwyt-do-sznurka-brukarskiego-murarskiego-075-mm-pret-24-mm-m8-czarny?rep=1089105869"
+      },
+      {
+        "name": "Allegro",
+        "colorId": "red",
+        "listedColorId": "orange",
+        "url": "https://allegro.pl/produkt/uchwyt-do-sznurka-brukarskiego-murarskiego-na-pret-24mm-pomaranczowy-5dd871ee-d86b-47d1-b6f1-987c19a1ca86?offerId=18883894172"
+      }
+    ],
+    "gallery": [
+      {
+        "image": "assets/images/line-holder/photo-04.jpg",
+        "caption": "Front view",
+        "alt": "Orange masonry line holder, front view on white"
+      },
+      {
+        "image": "assets/images/line-holder/photo-06.jpg",
+        "caption": "Top view",
+        "alt": "Top view showing the rod opening, steel screw, and line guide"
+      },
+      {
+        "image": "assets/images/line-holder/generated/in-use/photo-01-professional.png",
+        "caption": "On the job",
+        "alt": "Orange line holder mounted on a reinforcing rod beside paving edges",
+        "sourceImage": "assets/images/line-holder/photo-01.jpg",
+        "editingNote": "AI-assisted professional edit of the original in-use photograph.",
+        "featuredInUse": true
+      },
+      {
+        "image": "assets/images/line-holder/generated/in-use/photo-02-professional.png",
+        "caption": "Installed detail",
+        "alt": "Angled view of the installed holder guiding a pink masonry line",
+        "sourceImage": "assets/images/line-holder/photo-02.jpg",
+        "editingNote": "AI-assisted professional edit of the original in-use photograph.",
+        "featuredInUse": true
+      },
+      {
+        "image": "assets/images/line-holder/photo-03.jpg",
+        "caption": "Line alignment",
+        "alt": "View from above of the mounted holder and masonry line"
+      },
+      {
+        "image": "assets/images/line-holder/photo-05.jpg",
+        "caption": "Front detail",
+        "alt": "Front view of the orange holder and black adjustment knob on a tabletop"
+      },
+      {
+        "image": "assets/images/line-holder/photo-07.jpg",
+        "caption": "Clamp detail",
+        "alt": "Top view of the holder with its steel screw and circular rod opening"
+      },
+      {
+        "image": "assets/images/line-holder/photo-08.jpg",
+        "caption": "Side angle",
+        "alt": "Side angle showing the toothed line guide and clamping mechanism"
+      },
+      {
+        "image": "assets/images/line-holder/photo-09.jpg",
+        "caption": "Our signature",
+        "alt": "Underside of the orange holder with the SI 3D PROJECT logo"
+      }
+    ],
+    "colors": [
+      {
+        "id": "green",
+        "name": "Green",
+        "hex": "#00AE42"
+      },
+      {
+        "id": "blue",
+        "name": "Blue",
+        "hex": "#489FDF"
+      },
+      {
+        "id": "red",
+        "name": "Red",
+        "hex": "#D32941"
+      },
+      {
+        "id": "black",
+        "name": "Black",
+        "hex": "#000000"
+      },
+      {
+        "id": "orange",
+        "name": "Orange",
+        "hex": "#FF7900"
+      }
+    ],
+    "views": [
+      {
+        "id": "studio",
+        "name": "Studio",
+        "kind": "scene"
+      },
+      {
+        "id": "front",
+        "name": "Front",
+        "kind": "cutout"
+      },
+      {
+        "id": "rear",
+        "name": "Rear",
+        "kind": "cutout"
+      },
+      {
+        "id": "left",
+        "name": "Left",
+        "kind": "cutout"
+      },
+      {
+        "id": "right",
+        "name": "Right",
+        "kind": "cutout"
+      }
+    ],
+    "variants": {
+      "studio": {
+        "green": "assets/images/line-holder/generated/colors/green.png",
+        "blue": "assets/images/line-holder/generated/colors/blue.png",
+        "red": "assets/images/line-holder/generated/colors/red.png",
+        "black": "assets/images/line-holder/generated/colors/black.png",
+        "orange": "assets/images/line-holder/generated/ads/studio.png"
+      },
+      "front": {
+        "green": "assets/images/line-holder/generated/colors/front/green.png",
+        "blue": "assets/images/line-holder/generated/colors/front/blue.png",
+        "red": "assets/images/line-holder/generated/colors/front/red.png",
+        "black": "assets/images/line-holder/generated/colors/front/black.png",
+        "orange": "assets/images/line-holder/generated/sides/front.png"
+      },
+      "rear": {
+        "green": "assets/images/line-holder/generated/colors/rear/green.png",
+        "blue": "assets/images/line-holder/generated/colors/rear/blue.png",
+        "red": "assets/images/line-holder/generated/colors/rear/red.png",
+        "black": "assets/images/line-holder/generated/colors/rear/black.png",
+        "orange": "assets/images/line-holder/generated/sides/rear.png"
+      },
+      "left": {
+        "green": "assets/images/line-holder/generated/colors/left/green.png",
+        "blue": "assets/images/line-holder/generated/colors/left/blue.png",
+        "red": "assets/images/line-holder/generated/colors/left/red.png",
+        "black": "assets/images/line-holder/generated/colors/left/black.png",
+        "orange": "assets/images/line-holder/generated/sides/left.png"
+      },
+      "right": {
+        "green": "assets/images/line-holder/generated/colors/right/green.png",
+        "blue": "assets/images/line-holder/generated/colors/right/blue.png",
+        "red": "assets/images/line-holder/generated/colors/right/red.png",
+        "black": "assets/images/line-holder/generated/colors/right/black.png",
+        "orange": "assets/images/line-holder/generated/sides/right.png"
+      }
+    },
+    "colorNote": "Color preview. Actual printed colors may vary.",
+    "availabilityNote": "Choose a finish to open its matching listing. Price, stock and delivery are shown by the marketplace. Contact us for colors without a supplied listing."
+  }
+]

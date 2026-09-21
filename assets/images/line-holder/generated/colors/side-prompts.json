@@ -1,0 +1,101 @@
+{
+  "method": "built-in imagegen",
+  "jobs": [
+    {
+      "view": "front",
+      "name": "green",
+      "hex": "00AE42",
+      "prompt": "Use case: precise-object-edit. Retouch the provided front product cutout IN PLACE. Change ONLY the ORANGE polymer to GREEN, base material color sRGB #00AE42. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "front",
+      "name": "blue",
+      "hex": "489FDF",
+      "prompt": "Use case: precise-object-edit. Retouch the provided front product cutout IN PLACE. Change ONLY the ORANGE polymer to BLUE, base material color sRGB #489FDF. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "front",
+      "name": "red",
+      "hex": "D32941",
+      "prompt": "Use case: precise-object-edit. Retouch the provided front product cutout IN PLACE. Change ONLY the ORANGE polymer to RED, base material color sRGB #D32941. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "front",
+      "name": "black",
+      "hex": "000000",
+      "prompt": "Use case: precise-object-edit. Retouch the provided front product cutout IN PLACE. Change ONLY the ORANGE polymer to BLACK, base material color sRGB #000000. Preserve natural lighting, shadows, FDM layer microtexture and highlights; use rich black polymer with subtle charcoal highlights so the shape stays readable. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "rear",
+      "name": "green",
+      "hex": "00AE42",
+      "prompt": "Use case: precise-object-edit. Retouch the provided rear product cutout IN PLACE. Change ONLY the ORANGE polymer to GREEN, base material color sRGB #00AE42. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver. Keep the complete existing white SI 3D PROJECT logo exactly white and unchanged in shape, lettering and position. Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "rear",
+      "name": "blue",
+      "hex": "489FDF",
+      "prompt": "Use case: precise-object-edit. Retouch the provided rear product cutout IN PLACE. Change ONLY the ORANGE polymer to BLUE, base material color sRGB #489FDF. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver. Keep the complete existing white SI 3D PROJECT logo exactly white and unchanged in shape, lettering and position. Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "rear",
+      "name": "red",
+      "hex": "D32941",
+      "prompt": "Use case: precise-object-edit. Retouch the provided rear product cutout IN PLACE. Change ONLY the ORANGE polymer to RED, base material color sRGB #D32941. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver. Keep the complete existing white SI 3D PROJECT logo exactly white and unchanged in shape, lettering and position. Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "rear",
+      "name": "black",
+      "hex": "000000",
+      "prompt": "Use case: precise-object-edit. Retouch the provided rear product cutout IN PLACE. Change ONLY the ORANGE polymer to BLACK, base material color sRGB #000000. Preserve natural lighting, shadows, FDM layer microtexture and highlights; use rich black polymer with subtle charcoal highlights so the shape stays readable. Leave the black handwheel black and threaded metal screw silver. Keep the complete existing white SI 3D PROJECT logo exactly white and unchanged in shape, lettering and position. Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "left",
+      "name": "green",
+      "hex": "00AE42",
+      "prompt": "Use case: precise-object-edit. Retouch the provided left product cutout IN PLACE. Change ONLY the ORANGE polymer to GREEN, base material color sRGB #00AE42. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "left",
+      "name": "blue",
+      "hex": "489FDF",
+      "prompt": "Use case: precise-object-edit. Retouch the provided left product cutout IN PLACE. Change ONLY the ORANGE polymer to BLUE, base material color sRGB #489FDF. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "left",
+      "name": "red",
+      "hex": "D32941",
+      "prompt": "Use case: precise-object-edit. Retouch the provided left product cutout IN PLACE. Change ONLY the ORANGE polymer to RED, base material color sRGB #D32941. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "left",
+      "name": "black",
+      "hex": "000000",
+      "prompt": "Use case: precise-object-edit. Retouch the provided left product cutout IN PLACE. Change ONLY the ORANGE polymer to BLACK, base material color sRGB #000000. Preserve natural lighting, shadows, FDM layer microtexture and highlights; use rich black polymer with subtle charcoal highlights so the shape stays readable. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "right",
+      "name": "green",
+      "hex": "00AE42",
+      "prompt": "Use case: precise-object-edit. Retouch the provided right product cutout IN PLACE. Change ONLY the ORANGE polymer to GREEN, base material color sRGB #00AE42. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "right",
+      "name": "blue",
+      "hex": "489FDF",
+      "prompt": "Use case: precise-object-edit. Retouch the provided right product cutout IN PLACE. Change ONLY the ORANGE polymer to BLUE, base material color sRGB #489FDF. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "right",
+      "name": "red",
+      "hex": "D32941",
+      "prompt": "Use case: precise-object-edit. Retouch the provided right product cutout IN PLACE. Change ONLY the ORANGE polymer to RED, base material color sRGB #D32941. Preserve natural lighting, shadows, FDM layer microtexture and highlights; the specified hex is the base material midtone, not a flat fill. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    },
+    {
+      "view": "right",
+      "name": "black",
+      "hex": "000000",
+      "prompt": "Use case: precise-object-edit. Retouch the provided right product cutout IN PLACE. Change ONLY the ORANGE polymer to BLACK, base material color sRGB #000000. Preserve natural lighting, shadows, FDM layer microtexture and highlights; use rich black polymer with subtle charcoal highlights so the shape stays readable. Leave the black handwheel black and threaded metal screw silver.  Preserve every geometric detail, silhouette, angle, perspective, size, position, circular hole, tabs, stepped sloping feet, straight comb teeth and black knob. Do not rotate, translate, zoom, crop, redraw, change tooth count or redesign the product. No orange fringes left on polymer edges. GENUINE TRANSPARENT ALPHA BACKGROUND, including the open hole and spaces between teeth. No opaque backdrop, no black background, no checkerboard baked into image, no floor or cast shadow outside the object. The reference's transparent pixels must remain transparent. Output one square PNG, matching the original composition. This is a color-only edit for a registered product color switcher; identical geometry and placement are essential."
+    }
+  ]
+}

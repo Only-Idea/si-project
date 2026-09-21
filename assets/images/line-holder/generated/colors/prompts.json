@@ -1,0 +1,26 @@
+{
+  "method": "built-in imagegen",
+  "reference": "../ads/studio.png",
+  "studio": [
+    {
+      "name": "green",
+      "hex": "00AE42",
+      "prompt": "Use case: precise-object-edit. Asset: a color variant for an instant product color selector. Edit the supplied studio product photograph IN PLACE. Change ONLY the orange polymer body, including tabs, base and comb teeth, to GREEN with target base material sRGB #00AE42. Use #00AE42 as the material's midtone reference; preserve realistic shadows and specular highlights. Keep the black handwheel BLACK and the steel screw SILVER. Lock the original product silhouette and all geometry, size, placement, exact camera angle, perspective, fine FDM print texture, hole, tabs, sloped feet and comb teeth. Keep the exact white background, pale stone platform, crop, lighting and shadows. Do not move, rotate, zoom, reshape or redesign anything. Remove orange color casts from the recolored body; only the subtle reflected body color on the stone may naturally follow the new material. This is a carefully registered color-only retouch of the same photo, not a new rendering. No text, labels, watermark, extra objects, or collage. Deliver one landscape PNG at the same 1536x1024 composition."
+    },
+    {
+      "name": "blue",
+      "hex": "489FDF",
+      "prompt": "Use case: precise-object-edit. Asset: a color variant for an instant product color selector. Edit the supplied studio product photograph IN PLACE. Change ONLY the orange polymer body, including tabs, base and comb teeth, to BLUE with target base material sRGB #489FDF. Use #489FDF as the material's midtone reference; preserve realistic shadows and specular highlights. Keep the black handwheel BLACK and the steel screw SILVER. Lock the original product silhouette and all geometry, size, placement, exact camera angle, perspective, fine FDM print texture, hole, tabs, sloped feet and comb teeth. Keep the exact white background, pale stone platform, crop, lighting and shadows. Do not move, rotate, zoom, reshape or redesign anything. Remove orange color casts from the recolored body; only the subtle reflected body color on the stone may naturally follow the new material. This is a carefully registered color-only retouch of the same photo, not a new rendering. No text, labels, watermark, extra objects, or collage. Deliver one landscape PNG at the same 1536x1024 composition."
+    },
+    {
+      "name": "red",
+      "hex": "D32941",
+      "prompt": "Use case: precise-object-edit. Asset: a color variant for an instant product color selector. Edit the supplied studio product photograph IN PLACE. Change ONLY the orange polymer body, including tabs, base and comb teeth, to RED with target base material sRGB #D32941. Use #D32941 as the material's midtone reference; preserve realistic shadows and specular highlights. Keep the black handwheel BLACK and the steel screw SILVER. Lock the original product silhouette and all geometry, size, placement, exact camera angle, perspective, fine FDM print texture, hole, tabs, sloped feet and comb teeth. Keep the exact white background, pale stone platform, crop, lighting and shadows. Do not move, rotate, zoom, reshape or redesign anything. Remove orange color casts from the recolored body; only the subtle reflected body color on the stone may naturally follow the new material. This is a carefully registered color-only retouch of the same photo, not a new rendering. No text, labels, watermark, extra objects, or collage. Deliver one landscape PNG at the same 1536x1024 composition."
+    },
+    {
+      "name": "black",
+      "hex": "000000",
+      "prompt": "Use case: precise-object-edit. Asset: a color variant for an instant product color selector. Edit the supplied studio product photograph IN PLACE. Change ONLY the orange polymer body, including tabs, base and comb teeth, to BLACK with target base material sRGB #000000. The body must look like rich true black polymer, with natural charcoal highlights that keep the fine FDM layers and teeth legible. Keep the black handwheel BLACK and the steel screw SILVER. Lock the original product silhouette and all geometry, size, placement, exact camera angle, perspective, fine FDM print texture, hole, tabs, sloped feet and comb teeth. Keep the exact white background, pale stone platform, crop, lighting and shadows. Do not move, rotate, zoom, reshape or redesign anything. Remove orange color casts from the recolored body; only the subtle reflected body color on the stone may naturally follow the new material. This is a carefully registered color-only retouch of the same photo, not a new rendering. No text, labels, watermark, extra objects, or collage. Deliver one landscape PNG at the same 1536x1024 composition."
+    }
+  ]
+}
