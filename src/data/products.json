@@ -74,7 +74,15 @@
         "alt": "Orange line holder mounted on a reinforcing rod beside paving edges",
         "sourceImage": "assets/images/line-holder/photo-01.jpg",
         "editingNote": "AI-assisted professional edit of the original in-use photograph.",
-        "featuredInUse": true
+        "featuredInUse": true,
+        "colorVariants": {
+          "green": "assets/images/line-holder/generated/in-use/photo-01-professional-green.png",
+          "blue": "assets/images/line-holder/generated/in-use/photo-01-professional-blue.png",
+          "red": "assets/images/line-holder/generated/in-use/photo-01-professional-red.png",
+          "black": "assets/images/line-holder/generated/in-use/photo-01-professional-black.png",
+          "orange": "assets/images/line-holder/generated/in-use/photo-01-professional.png"
+        },
+        "colorAlt": "{color} line holder mounted on a reinforcing rod beside paving edges"
       },
       {
         "image": "assets/images/line-holder/generated/in-use/photo-02-professional.png",
@@ -82,7 +90,15 @@
         "alt": "Angled view of the installed holder guiding a pink masonry line",
         "sourceImage": "assets/images/line-holder/photo-02.jpg",
         "editingNote": "AI-assisted professional edit of the original in-use photograph.",
-        "featuredInUse": true
+        "featuredInUse": true,
+        "colorVariants": {
+          "green": "assets/images/line-holder/generated/in-use/photo-02-professional-green.png",
+          "blue": "assets/images/line-holder/generated/in-use/photo-02-professional-blue.png",
+          "red": "assets/images/line-holder/generated/in-use/photo-02-professional-red.png",
+          "black": "assets/images/line-holder/generated/in-use/photo-02-professional-black.png",
+          "orange": "assets/images/line-holder/generated/in-use/photo-02-professional.png"
+        },
+        "colorAlt": "Angled view of the {color} line holder guiding a pink masonry line"
       },
       {
         "image": "assets/images/line-holder/photo-03.jpg",

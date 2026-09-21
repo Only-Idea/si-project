@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+  <title>Od kartonowego prototypu do pierwszego pomysłu</title>
+  <defs>
+    <linearGradient id="panel" x1="168" y1="126" x2="317" y2="233" gradientUnits="userSpaceOnUse"><stop stop-color="#318BE0"/><stop offset="1" stop-color="#0965BB"/></linearGradient>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#C6DCF0"/></pattern>
+  </defs>
+  <path d="M78 233C42 164 91 78 169 64C255 48 337 72 376 132C418 197 381 291 310 312C229 336 119 310 78 233Z" fill="#F0F7FD"/>
+  <path d="M319 59H421V162H319Z" fill="url(#dots)"/>
+  <ellipse cx="248" cy="296" rx="151" ry="13" fill="#DFECF8"/>
+  <g stroke="#ECA35B" stroke-width="2" stroke-linecap="round">
+    <circle cx="109" cy="85" r="23" fill="#FFF0D9"/>
+    <path d="M109 47V40M109 130V123M71 85H64M154 85H147M82 58L77 53M141 117L136 112M82 112L77 117M141 53L136 58"/>
+  </g>
+  <path d="M156 77C224 39 318 59 350 120" stroke="#91BCE3" stroke-width="1.5" stroke-dasharray="5 7" stroke-linecap="round"/>
+  <path d="M340 116L352 125L355 110" stroke="#5599D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M222 269L279 250L327 275L270 296L222 269Z" fill="#D4E6F7" stroke="#648AAE" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M222 269V277L270 304L327 283V275M270 296V304" stroke="#648AAE" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M258 210V272L272 280L282 275V205" fill="#A1C8EA" stroke="#457CAD" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M272 219V280" stroke="#457CAD" stroke-width="1.5"/>
+  <circle cx="267" cy="215" r="15" fill="#E7F2FC" stroke="#457CAD" stroke-width="1.5"/>
+  <circle cx="267" cy="215" r="5" fill="#377CB9"/>
+  <path d="M155 139L282 106L353 205L224 245L155 139Z" fill="#E8F3FC" stroke="#265B88" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M155 139V147L223 253L353 213V205M224 245L223 253" stroke="#265B88" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M168 145L277 118L339 199L229 232L168 145Z" fill="url(#panel)"/>
+  <g stroke="#C0E1FF" stroke-width="1.2" stroke-linecap="round">
+    <path d="M204 136L266 221M241 127L302 210M188 173L297 146M209 203L318 173"/>
+  </g>
+  <path d="M298 237C336 239 355 258 346 273C337 288 306 280 306 265" stroke="#397CAA" stroke-width="2" stroke-linecap="round"/>
+  <path d="M91 243L132 225L169 242L127 261L91 243Z" fill="#F3D1A6" stroke="#B58B61" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M91 243V274L127 295V261L91 243Z" fill="#DAB084" stroke="#B58B61" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M127 261L169 242V275L127 295V261Z" fill="#E9C399" stroke="#B58B61" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M132 225L127 261M110 234L150 252" stroke="#B58B61" stroke-width="1.5"/>
+  <path d="M91 243L76 227L113 211L132 225M132 225L146 209L184 225L169 242" fill="#F7DFC0" stroke="#B58B61" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M98 261L118 272M98 267L118 278" stroke="#B58B61" stroke-width="1.2" stroke-linecap="round"/>
+  <circle cx="377" cy="233" r="5" fill="#80B9E9"/>
+  <path d="M64 181H76M70 175V187" stroke="#80B9E9" stroke-width="2" stroke-linecap="round"/>
+</svg>

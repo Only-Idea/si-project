@@ -21,6 +21,11 @@ for (const product of products) {
     return photo.image;
   });
   for (const color of product.colors) assert.match(color.hex, /^#[\da-f]{6}$/i);
+  for (const photo of product.gallery.filter(photo => photo.featuredInUse)) {
+    assert(photo.colorAlt?.includes('{color}'), 'In-use photos need color-aware alt text');
+    assert.equal(Object.keys(photo.colorVariants || {}).length, colors.size, 'Incomplete in-use color variants');
+    for (const color of product.colors) paths.push(photo.colorVariants[color.id]);
+  }
   for (const view of product.views) {
     assert.equal(Object.keys(product.variants[view.id]).length, colors.size, `Incomplete ${view.id} variants`);
     for (const color of product.colors) paths.push(product.variants[view.id][color.id]);

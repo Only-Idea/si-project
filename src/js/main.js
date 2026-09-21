@@ -4,17 +4,19 @@ import { initColorViewers } from './product-colors.js';
 import { product } from './catalogue.js';
 import { initMotion } from './motion.js';
 import { initInstallationGallery } from './installation-gallery.js';
+import { initLanguage, t } from './i18n.js';
 
+initLanguage();
 initNavigation();
 initColorViewers();
 initInstallationGallery();
 document.querySelectorAll('[data-product-specs]').forEach(list => {
-  list.replaceChildren(...product.specs.map(spec => {
+  list.replaceChildren(...product.specs.map((spec, index) => {
     const row = document.createElement('div');
     const term = document.createElement('dt');
     const value = document.createElement('dd');
-    term.textContent = spec.label;
-    value.textContent = spec.value;
+    term.textContent = t(`spec.label.${index}`);
+    value.textContent = t(`spec.value.${index}`);
     row.append(term, value);
     return row;
   }));

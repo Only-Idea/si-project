@@ -29,7 +29,11 @@
   h1, .hero h1 { font-size: 40px; }
   h2 { font-size: 32px; }
   h3 { font-size: 28px; }
-  .nav-inner { min-height: 72px; }
+  .nav-inner { min-height: 72px; gap: 8px; }
+  .nav-inner > .brand { gap: 8px; }
+  .language-switcher { margin-left: auto; }
+  .language-switcher select { width: 88px; font-size: 11px; padding: 6px; }
+  .menu-toggle { order: 4; flex-shrink: 0; }
   .brand img { width: 36px; height: 36px; }
   .brand-name { font-size: 10px; }
   .brand-name span { font-size: 9px; }
@@ -48,8 +52,6 @@
   .hero-art { margin: 16px 0 0; }
   .hero-art img { height: 390px; max-height: 55svh; width: 100%; }
   .image-note { margin-top: 0; font-size: 9px; }
-  .hero-bottom { padding-block: 24px; margin-top: 8px; }
-  .hero-bottom span:last-child { display: none; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature { padding: 24px 28px 32px; }
   .feature-section-heading { align-items: start; flex-direction: column; gap: 16px; }

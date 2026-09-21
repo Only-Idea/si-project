@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" fill="none">
+  <title>Wspomnienia wydrukowane na nasz ślub</title>
+  <defs>
+    <linearGradient id="heart" x1="198" y1="101" x2="325" y2="219" gradientUnits="userSpaceOnUse"><stop stop-color="#80BDF1"/><stop offset="1" stop-color="#126CCA"/></linearGradient>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#C6DCF0"/></pattern>
+  </defs>
+  <path d="M73 220C50 151 105 78 181 69C263 59 357 75 387 149C417 224 365 292 290 312C201 336 99 300 73 220Z" fill="#E9F2FC"/>
+  <path d="M55 69H145V155H55Z" fill="url(#dots)"/>
+  <ellipse cx="245" cy="297" rx="151" ry="13" fill="#D9E8F7"/>
+  <path d="M199 245L296 220L352 250L254 278L199 245Z" fill="#fff" stroke="#6B94BA" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M199 245V263L254 294L352 265V250L254 278L199 245Z" fill="#C6E0F7" stroke="#6B94BA" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M254 278V294" stroke="#6B94BA" stroke-width="1.5"/>
+  <path d="M230 252L290 235L315 249L254 267L230 252Z" fill="#ECF5FE"/>
+  <path d="M269 225V251" stroke="#739BC0" stroke-width="7" stroke-linecap="round"/>
+  <path d="M264 211C254 202 195 161 195 129C195 91 242 80 265 111C288 80 335 91 335 129C335 161 277 202 264 211Z" stroke="#D1E6FB" stroke-width="25" stroke-linejoin="round"/>
+  <path d="M264 211C254 202 195 161 195 129C195 91 242 80 265 111C288 80 335 91 335 129C335 161 277 202 264 211Z" stroke="url(#heart)" stroke-width="13" stroke-linejoin="round"/>
+  <path d="M264 209C251 197 199 159 199 129C199 95 242 85 265 116C288 85 331 95 331 129C331 159 277 199 264 209Z" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M323 277C378 295 404 265 384 249" stroke="#78A2C7" stroke-width="1.5" stroke-linecap="round"/>
+  <g transform="rotate(-12 140 241)">
+    <rect x="93" y="183" width="94" height="115" rx="12" fill="#FFF9F0" stroke="#C4A789" stroke-width="1.5"/>
+    <circle cx="140" cy="199" r="3" fill="#D1B18C"/>
+    <path d="M140 197C118 173 123 160 132 166C140 171 140 185 140 197C144 175 156 163 161 170C168 180 151 190 140 197Z" stroke="#BE956D" stroke-width="1.5"/>
+    <circle cx="140" cy="239" r="28" fill="#B9D9F5" stroke="#4D88BC" stroke-width="1.5"/>
+    <circle cx="140" cy="236" r="28" fill="#E8F4FF" stroke="#4D88BC" stroke-width="1.5"/>
+    <path d="M140 249C132 244 123 237 123 231C123 222 134 221 140 228C146 221 157 222 157 231C157 237 148 244 140 249Z" fill="#3789D9"/>
+    <path d="M123 280H157" stroke="#C4A789" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g stroke="#CDA165" stroke-width="2">
+    <ellipse cx="334" cy="297" rx="22" ry="12" transform="rotate(-18 334 297)" fill="#FFF3DE"/>
+    <ellipse cx="355" cy="286" rx="22" ry="12" transform="rotate(-38 355 286)" fill="#FFF3DE"/>
+    <path d="M314 301C321 307 335 307 347 297"/>
+  </g>
+  <path d="M367 88V105M359 96H376M155 121V133M149 127H161" stroke="#D6A76F" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="382" cy="188" r="4" fill="#86BAE7"/>
+  <path d="M100 155L105 149L110 155L105 161L100 155Z" fill="#9EC9ED"/>
+</svg>

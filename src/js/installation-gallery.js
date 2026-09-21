@@ -1,3 +1,4 @@
+import { t, colorName } from './i18n.js';
 import { product, assetUrl } from './catalogue.js';
 
 export function initInstallationGallery() {
@@ -7,19 +8,26 @@ export function initInstallationGallery() {
   if (photos.length < 2) return;
   const image = gallery.querySelector('img');
   const caption = gallery.querySelector('figcaption');
+  const colorId = new URLSearchParams(location.search).get('color');
+  let selectedColor = product.colors.find(color => color.id === colorId) || product.colors[0];
+  const photoUrl = (photo, color) => assetUrl(photo.colorVariants[color.id]);
+  const photoAlt = (photo, color) => t(`installation.alt.${photos.indexOf(photo)}`, { color: colorName(color) });
+  image.src = photoUrl(photos[0], selectedColor);
+  image.alt = photoAlt(photos[0], selectedColor);
+  image.dataset.installationColor = selectedColor.id;
   const frame = document.createElement('div');
   frame.className = 'installation-frame';
   frame.tabIndex = 0;
-  frame.setAttribute('aria-label', 'Installation photos. Use left and right arrow keys to browse.');
+  frame.setAttribute('aria-label', t('installation.keyboard'));
   image.before(frame);
   frame.append(image);
   image.draggable = false;
   caption.innerHTML = `<div class="installation-controls">
-    <button type="button" class="carousel-arrow" data-installation-prev aria-label="Previous installation photo">←</button>
-    <span data-installation-status role="status" aria-live="polite">${photos[0].caption} · 1 / ${photos.length}</span>
-    <button type="button" class="carousel-arrow" data-installation-next aria-label="Next installation photo">→</button>
-    </div><div class="installation-caption"><span>Made for paving and brickwork.</span>
-    <a data-installation-full href="${assetUrl(photos[0].image)}" target="_blank" rel="noopener noreferrer">View full size <span aria-hidden="true">↗</span></a></div>
+    <button type="button" class="carousel-arrow" data-installation-prev aria-label="${t('installation.previous')}">←</button>
+    <span data-installation-status role="status" aria-live="polite">${colorName(selectedColor)} · ${t('installation.photo.0')} · 1 / ${photos.length}</span>
+    <button type="button" class="carousel-arrow" data-installation-next aria-label="${t('installation.next')}">→</button>
+    </div><div class="installation-caption"><span>${t('installation.caption')}</span>
+    <a data-installation-full href="${photoUrl(photos[0], selectedColor)}" target="_blank" rel="noopener noreferrer">${t('installation.full')} <span aria-hidden="true">↗</span></a></div>
     <p class="installation-error" role="alert"></p>`;
   const status = caption.querySelector('[data-installation-status]');
   const full = caption.querySelector('[data-installation-full]');
@@ -32,27 +40,34 @@ export function initInstallationGallery() {
     const index = requested;
     const request = ++sequence;
     const photo = photos[index];
+    const color = selectedColor;
     const next = new Image();
-    next.src = assetUrl(photo.image);
+    next.src = photoUrl(photo, color);
     frame.setAttribute('aria-busy', 'true');
     error.textContent = '';
     try {
       await next.decode();
       if (request !== sequence) return;
       image.src = next.src;
-      image.alt = photo.alt;
+      image.alt = photoAlt(photo, color);
+      image.dataset.installationColor = color.id;
       full.href = next.src;
-      status.textContent = `${photo.caption} · ${index + 1} / ${photos.length}`;
+      status.textContent = `${colorName(color)} · ${t(`installation.photo.${index}`)} · ${index + 1} / ${photos.length}`;
       active = index;
     } catch {
       if (request === sequence) {
         requested = active;
-        error.textContent = 'This photo could not load. Please try again.';
+        error.textContent = t('gallery.error');
       }
     } finally {
       if (request === sequence) frame.setAttribute('aria-busy', 'false');
     }
   }
+  document.addEventListener('product-color-change', event => {
+    if (event.detail.id === selectedColor.id && image.dataset.installationColor === selectedColor.id) return;
+    selectedColor = event.detail;
+    move(0);
+  });
   caption.querySelector('[data-installation-prev]').addEventListener('click', () => move(-1));
   caption.querySelector('[data-installation-next]').addEventListener('click', () => move(1));
   frame.addEventListener('keydown', event => {

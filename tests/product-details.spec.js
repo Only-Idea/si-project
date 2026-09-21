@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 
-test.beforeEach(async ({ page }) => { await page.emulateMedia({ reducedMotion: 'reduce' }); });
+test.beforeEach(async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.addInitScript(() => localStorage.setItem('si-language', 'en'));
+});
 
 test('each finish opens its supplied marketplace; selection survives reload', async ({ page, context }) => {
   await context.route(/https:\/\/(allegro\.pl|allegrolokalnie\.pl)\//, route => route.fulfill({ status: 200, body: 'Marketplace navigation test' }));
@@ -43,7 +46,7 @@ test('installation gallery supports both professional photos, keyboard, swipe an
   const image = page.locator('[data-installation-gallery] img');
   const next = page.getByRole('button', { name: 'Next installation photo', exact: true });
   const manifest = JSON.parse(readFileSync(new URL('../dist/.vite/manifest.json', import.meta.url), 'utf8'));
-  const second = manifest['assets/images/line-holder/generated/in-use/photo-02-professional.png'].file;
+  const second = manifest['assets/images/line-holder/generated/in-use/photo-02-professional-green.png'].file;
   await page.route(`**/${second}`, route => route.abort());
   await next.click();
   await expect(page.locator('.installation-error')).toContainText('could not load');
@@ -77,14 +80,62 @@ test('installation gallery supports both professional photos, keyboard, swipe an
   }
 });
 
-test('product specifications and orange purchase link work without JavaScript', async ({ browser }) => {
+test('Polish product specifications and orange purchase link work without JavaScript', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
   const page = await context.newPage();
   await page.goto('http://127.0.0.1:4173/products.html');
   await expect(page.locator('[data-product-specs]')).toContainText('ABS');
   await expect(page.locator('[data-product-shop]')).toHaveAttribute('href', /offerId=18883894172/);
-  await expect(page.locator('[data-purchase-note]')).toContainText('Orange edition');
-  await page.getByText('What comes with the holder?', { exact: true }).click();
-  await expect(page.locator('.product-questions details[open]')).toContainText('One ABS holder');
+  await expect(page.locator('[data-purchase-note]')).toContainText('Wersja pomarańczowa');
+  await page.getByText('Co znajduje się w zestawie?', { exact: true }).click();
+  await expect(page.locator('.product-questions details[open]')).toContainText('Jeden uchwyt z ABS');
   await context.close();
+});
+
+test('both installation angles follow every selected color and direct color link', async ({ page }) => {
+  const manifest = JSON.parse(readFileSync(new URL('../dist/.vite/manifest.json', import.meta.url), 'utf8'));
+  const image = page.locator('[data-installation-gallery] img');
+  const next = page.getByRole('button', { name: 'Next installation photo', exact: true });
+  const expectedImage = (angle, color) => new RegExp('/' + manifest[`assets/images/line-holder/generated/in-use/photo-0${angle}-professional${color === 'orange' ? '' : '-' + color}.png`].file + '$');
+  for (const color of ['green', 'blue', 'red', 'black', 'orange']) {
+    await page.goto(`/products.html?color=${color}`);
+    await expect(image).toHaveAttribute('src', expectedImage(1, color));
+    await next.click();
+    await expect(image).toHaveAttribute('src', expectedImage(2, color));
+    await expect(image).toHaveAttribute('data-installation-color', color);
+    await expect(page.locator('[data-installation-full]')).toHaveAttribute('href', expectedImage(2, color));
+    expect(await image.evaluate(element => element.complete && element.naturalWidth > 0)).toBe(true);
+  }
+  for (const color of ['Green', 'Blue', 'Red', 'Black', 'Orange']) {
+    await page.getByRole('button', { name: color, exact: true }).click();
+    await expect(image).toHaveAttribute('src', expectedImage(2, color.toLowerCase()));
+    await expect(image).toHaveAttribute('alt', new RegExp(color));
+    await expect(page.locator('[data-installation-status]')).toContainText(`${color} · Installed detail · 2 / 2`);
+    await next.click();
+    await expect(image).toHaveAttribute('src', expectedImage(1, color.toLowerCase()));
+    await next.click();
+    await expect(image).toHaveAttribute('src', expectedImage(2, color.toLowerCase()));
+  }
+});
+
+test('a slow installation photo cannot overwrite a newer color selection', async ({ page }) => {
+  await page.goto('/products.html?color=orange');
+  const image = page.locator('[data-installation-gallery] img');
+  let release;
+  const gate = new Promise(resolve => { release = resolve; });
+  await page.route('**/photo-01-professional-green-*.png', async route => {
+    await gate;
+    await route.continue();
+  });
+  const greenRequest = page.waitForRequest('**/photo-01-professional-green-*.png');
+  await page.getByRole('button', { name: 'Green', exact: true }).click();
+  await greenRequest;
+  await page.getByRole('button', { name: 'Blue', exact: true }).click();
+  await expect(image).toHaveAttribute('data-installation-color', 'blue');
+  const greenResponse = page.waitForResponse('**/photo-01-professional-green-*.png');
+  release();
+  await greenResponse;
+  await page.getByRole('button', { name: 'Next installation photo', exact: true }).click();
+  await expect(image).toHaveAttribute('src', /photo-02-professional-blue-/);
+  await expect(image).toHaveAttribute('data-installation-color', 'blue');
 });

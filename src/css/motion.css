@@ -1,4 +1,20 @@
 /* Content has no hidden initial state: JavaScript and motion are optional. */
+/* Lenis: the script drives scrolling, so native smooth scrolling must step aside. */
+html.lenis, html.lenis body { height: auto; }
+html.lenis.lenis-smooth { scroll-behavior: auto !important; }
+/* Hide the hero only while the engine loads, so it never flashes before its entrance. The animation reveals it if the engine never answers. */
+html[data-motion='loading'] :is(.hero-copy, .story-hero, .product-intro) > *, html[data-motion='loading'] .hero-art img { opacity: 0; animation: motion-failsafe 0s 3s forwards; }
+@keyframes motion-failsafe { to { opacity: 1; } }
+/* Room for descenders and diacritics inside the heading line masks. */
+.split-line-mask { padding-block: .12em; margin-block: -.12em; }
+/* Grid items do not collapse margins, so the padding and negative margin cancel exactly. */
+:is(h1, h2, h3):has(> .split-line-mask) { display: grid; }
+/* The stage holds chapters 01-03 in one pinned viewport: they overlap and the timeline swaps them. */
+.story-stage.is-staged { display: grid; min-height: calc(100svh - 100px); }
+.story-stage.is-staged::before { content: ''; grid-area: 1 / 1; z-index: 1; align-self: start; justify-self: center; width: min(100% - 96px, 1200px); border-top: var(--border); pointer-events: none; }
+.story-stage.is-staged > [data-story-chapter] { grid-area: 1 / 1; display: grid; align-items: center; }
+.story-stage.is-staged .story-chapter { box-sizing: border-box; border-top: 0; padding-block: 48px; }
+@media (max-width: 1023px) { .story-stage.is-staged::before { width: calc(100% - 64px); } }
 .reading-progress { position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; pointer-events: none; }
 .reading-progress > span, .chapter-progress > span { display: block; width: 100%; height: 100%; background: var(--color-accent); transform-origin: left center; }
 .chapter-progress { display: block; width: 120px; height: 1px; margin-top: 28px; background: #c5dcf4; }

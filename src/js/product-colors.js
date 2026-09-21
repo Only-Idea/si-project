@@ -1,3 +1,4 @@
+import { t, colorName, localizedUrl } from './i18n.js';
 import { product, variantUrl } from './catalogue.js';
 import { renderColorViewer } from './color-viewer-template.js';
 import { updateProductPurchase } from './product-purchase.js';
@@ -30,7 +31,7 @@ export function initColorViewers() {
         image.dataset.colorImage = color;
         image.dataset.view = view;
         image.className = view === 'studio' ? '' : 'color-cutout';
-        image.alt = `${color} masonry line holder, ${product.views[index].name.toLowerCase()} view, with black knob and silver screw`;
+        image.alt = t('gallery.alt', { color: colorName(color), view: t(`view.${view}`) });
         image.draggable = false;
         image.setAttribute('aria-hidden', 'true');
         image.src = variantUrl(color, view);
@@ -73,20 +74,21 @@ export function initColorViewers() {
         activeColor = color;
         activeIndex = index;
         const selected = product.colors.find(item => item.name === color);
-        if (orderLink) orderLink.href = `products.html?color=${selected.id}`;
+        if (orderLink) orderLink.href = localizedUrl(`products.html?color=${selected.id}`);
         if (isProductPage) {
           updateProductPurchase(selected);
+          document.dispatchEvent(new CustomEvent('product-color-change', { detail: selected }));
           const url = new URL(location.href);
           url.searchParams.set('color', selected.id);
           history.replaceState(history.state, '', url);
         }
-        status.textContent = `${color}, photo ${index + 1} of ${product.views.length}.`;
+        status.textContent = t('gallery.status', { color: colorName(selected), index: index + 1, total: product.views.length });
         preload();
       } catch {
         if (currentRequest === request) {
           requestedColor = activeColor;
           requestedIndex = activeIndex;
-          error.textContent = 'This photo could not load. Please try again.';
+          error.textContent = t('gallery.error');
         }
       } finally {
         if (currentRequest === request) viewport.setAttribute('aria-busy', 'false');

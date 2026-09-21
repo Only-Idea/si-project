@@ -1,9 +1,10 @@
+import { t } from './i18n.js';
+
 export function initNavigation() {
   const navigation = document.querySelector('#navigation');
   const menu = document.querySelector('.menu-toggle');
-  const polish = document.documentElement.lang === 'pl';
-  const openLabel = polish ? 'Otwórz menu' : 'Open navigation';
-  const closeLabel = polish ? 'Zamknij menu' : 'Close navigation';
+  const openLabel = t('nav.open');
+  const closeLabel = t('nav.close');
   function closeMenu(restoreFocus = false) {
     navigation?.classList.remove('is-open');
     menu?.setAttribute('aria-expanded', 'false');
