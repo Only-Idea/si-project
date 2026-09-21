@@ -1,6 +1,6 @@
 # SI 3D PROJECT
 
-Multi-page website for the masonry line holder, built with Vite and vanilla JavaScript. The selected direction is Studio Blue on white. Later user choices supersede the original dark proposal in `plan.md` and `design_spec.md`.
+Multi-page website for the masonry line holder, built with Vite and vanilla JavaScript. The selected direction is Studio Blue on white. Later user choices supersede the original dark proposal in `docs/plan.md` and `docs/design_spec.md`.
 
 ## Run locally
 
@@ -29,27 +29,24 @@ Tests use installed Google Chrome on macOS when available. Otherwise run `npx pl
 - The product page contains its own carousel, in-use photograph, specifications, package contents, setup guidance and color-specific purchase links. The About page tells Iza and Sebastian’s story in four chapters, with chapter reveals, reading progress and subtle desktop parallax. All three pages are available in Polish, English and German.
 - Fixed Studio Blue branding, independent of the five product finishes: green `#00AE42`, blue `#489FDF`, red `#D32941` black `#000000`, and original orange (UI swatch `#FF7900`).
 - Five carousel photos per color: studio, front, rear, left and right. Arrows, position dots, swipe and keyboard navigation replace named side selectors. Text and controls retain their position when photos change.
-- Cinematic photos are excluded from the live carousel and build, but preserved in the asset archive.
 - Contact links open `mailto:studio@example.com`; no enquiry forms or catalogue.
-- `products.html` and `about.html` are real subpages, linked from the shared navigation. `style-guide.html` documents the selected direction.
+- `products.html` and `about.html` are real subpages, linked from the shared navigation.
 
 ## Implementation
 
 ### Languages
 
-Polish is the default, including the static HTML fallback. The header language selector switches between Polski, English and Deutsch. `?lang=pl`, `?lang=en` and `?lang=de` provide shareable language URLs; an explicit supported URL language takes precedence over the saved `si-language` preference. An invalid language falls back to Polish. Page links and product order links carry the current language, and switching languages retains the selected product color and URL fragment. Language selection still works when browser storage is unavailable.
+Polish is the default, including the static HTML fallback. The header language selector switches between Polski, English and Deutsch. Polish pages use `index.html`, `products.html` and `about.html`; English and German use corresponding `.en.html` and `.de.html` files. The build renders their translated HTML before JavaScript runs. Legacy `?lang=pl`, `?lang=en` and `?lang=de` links still work and redirect to these static URLs, retaining color and fragment. Explicit language choices take precedence over the saved `si-language` preference. An invalid language falls back to Polish. Page links and product order links carry the current language, and switching languages retains the selected product color and URL fragment. Language selection still works when browser storage is unavailable.
 
 Copy lives in `src/data/translations.json`, with natural wording for each language. `src/js/i18n.js` applies the `data-i18n` text and attribute keys before galleries and motion initialize; interactive controls use the same dictionary. When changing default Polish copy, keep its static HTML fallback in sync. Product IDs, color IDs and image mappings remain language-independent. `tests/languages.spec.js` covers all pages, responsive navigation, metadata, galleries, preferences and the Polish no-JavaScript fallback.
 
-`index.html`, `products.html` and `about.html` contain Home, Product and About. `src/css/` holds styling and design tokens. `src/js/main.js` initializes navigation and the product carousel. `catalogue.js` resolves Vite-managed image URLs, `product-colors.js` handles decoded image switching and loading failures, and `color-viewer-template.js` provides carousel markup. Product facts and variant mappings live in `src/data/products.json`. Older prototype modules remain unused; the entry point defines the active application.
+`index.html`, `products.html` and `about.html` contain Home, Product and About. `src/css/` holds styling and design tokens. `src/js/main.js` initializes navigation and the product carousel. `catalogue.js` resolves Vite-managed image URLs, `product-colors.js` handles decoded image switching and loading failures, and `color-viewer-template.js` provides carousel markup. Product facts and variant mappings live in `src/data/products.json`.
 
-The build includes nine original photographs, 25 live color/view images and the CAD-style hero. The hero is an AI-generated illustration, not a software screenshot or editable CAD model; its prompt is saved beside the asset. Product recolors are visualizations. The two installation photos are professional AI-assisted edits of the retained source photos.
-
-The original [24-image gallery](assets/images/line-holder/generated/colors/index.html), [PNG bundle](assets/images/line-holder/generated/colors/product-colors.zip), generation prompts and metadata remain in the workspace. The earlier static site under `preview/` is a historical design archive. Neither archive is included in the production build.
+The build includes 25 live color/view images, the two professional installation photos, the five-color campaign image and the CAD-style hero. The hero and campaign image are AI-generated illustrations, not software screenshots or editable CAD models. Product recolors are visualizations. The installation photos are professional AI-assisted edits of the owner’s original photographs, which are no longer kept in the repository.
 
 ## Status
 
-Preparation, design, front-end setup and the revised website UI are complete. The GSAP motion layer is active. Performance/SEO, broader browser QA and deployment remain later work. No remote repository or deployment has been created. See `docs/phase-status.md` and `docs/validation.md` for details.
+Preparation, design, front-end setup and the revised website UI are complete. The GSAP motion layer is active, and basic SEO and social previews are configured. Broader browser QA and deployment remain later work. No remote repository or deployment has been created. See `docs/phase-status.md` and `docs/validation.md` for details.
 
 ## Motion
 
@@ -60,3 +57,15 @@ Preparation, design, front-end setup and the revised website UI are complete. Th
 The product page’s color choice updates both purchase buttons and its shareable URL. Green, blue and orange use their individual Allegro offers; black uses Allegro Lokalnie. Per the owner’s instruction, red temporarily opens the orange listing and is explicitly labeled accordingly. All URLs live in `src/data/products.json`. Price, availability and delivery are not duplicated locally.
 
 `installation-gallery.js` presents both approved professional in-use photos with arrow keys, swipe, full-size links and failed-load recovery. Product information includes ABS material, supplied hardware, setup guidance and native FAQ disclosures. The specifications, FAQs and orange purchase link remain available without JavaScript.
+
+## SEO and link previews
+
+`npm run build` generates nine localized pages, `dist/robots.txt` and `dist/sitemap.xml`. Each page contains its own canonical URL, reciprocal `hreflang` alternates, Open Graph metadata and Twitter `summary_large_image` tags. Metadata is present in the HTTP response, including for crawlers without JavaScript. Color and tracking parameters are omitted from canonical URLs.
+
+The two JPEG previews in `public/social/` reuse the site photographs: the five product colors for Home/Product and the shared workbench for About. Each is 1200 × 800 pixels and under 250 KB. Vite serves them locally and copies them unchanged into `dist/social/`.
+
+Before publishing, copy `.env.example` to `.env` and set `SITE_URL` to the real HTTPS address assigned by the hosting service. A custom domain is optional; the hosting provider's public address works too. Then run `npm run build` and publish `dist/`. The build derives canonical URLs, social-image URLs and sitemap entries from that one setting. `SEO_INDEXABLE=false` keeps a public staging build out of the index.
+
+Without `SITE_URL`, the build is a local preview: URLs use `http://127.0.0.1:4173/`, robots disallows crawling and pages remain `noindex`. The development server always disables indexing. Public social preview services cannot fetch localhost; external previews can only be verified after publishing. No deployment is performed by the build.
+
+To check the result, inspect the page source, `/robots.txt`, `/sitemap.xml` and `/social/line-holder.jpg`. `tests/seo.spec.js` checks raw HTML, all nine canonical URLs, metadata, images, language pages without JavaScript, and public-versus-preview indexing settings. Implementation references: [Open Graph protocol](https://ogp.me/), [Google canonical URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls), [localized pages](https://developers.google.com/search/docs/specialty/international/localized-versions).

@@ -53,7 +53,8 @@ test('Polish is the default; changing language retains product color and section
     await expect(page.locator('html')).toHaveAttribute('lang', lang);
     const url = new URL(page.url());
     expect(url.searchParams.get('color')).toBe('blue');
-    expect(url.searchParams.get('lang')).toBe(lang);
+    expect(url.pathname).toBe(`/products${lang === 'pl' ? '' : '.' + lang}.html`);
+    expect(url.searchParams.has('lang')).toBe(false);
     expect(url.hash).toBe('#details');
     await expect(page.locator('[data-installation-gallery] img')).toHaveAttribute('data-installation-color', 'blue');
     await page.reload();
@@ -62,13 +63,13 @@ test('Polish is the default; changing language retains product color and section
   await page.locator('[data-language-select]').selectOption('de');
   await expect(page.locator('html')).toHaveAttribute('lang', 'de');
   await page.locator('#navigation [data-i18n="nav.about"]').click();
-  await expect(page).toHaveURL(/about.html\?lang=de$/);
+  await expect(page).toHaveURL(/about.de.html$/);
   await expect(page.locator('h1')).toContainText('Geplant war ein Bergurlaub.');
   await page.goto('/index.html');
   await expect(page.locator('html')).toHaveAttribute('lang', 'de');
   await page.getByRole('button', { name: 'Blau', exact: true }).click();
   await page.locator('[data-product-order]').click();
-  await expect(page).toHaveURL(/products.html\?color=blue&lang=de$/);
+  await expect(page).toHaveURL(/products.de.html\?color=blue$/);
 });
 
 test('explicit language works without storage and invalid language falls back to Polish', async ({ page }) => {

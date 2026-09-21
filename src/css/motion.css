@@ -1,4 +1,9 @@
 /* Content has no hidden initial state: JavaScript and motion are optional. */
+/* Pages cross-fade instead of flashing white; the header stays put while the content changes (browsers without support just navigate normally). */
+@view-transition { navigation: auto; }
+.site-header { view-transition-name: site-header; }
+::view-transition-group(root) { animation-duration: .3s; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
 /* Lenis: the script drives scrolling, so native smooth scrolling must step aside. */
 html.lenis, html.lenis body { height: auto; }
 html.lenis.lenis-smooth { scroll-behavior: auto !important; }

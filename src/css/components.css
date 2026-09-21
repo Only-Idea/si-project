@@ -104,7 +104,11 @@ body:has(.palette-bar) .page-intro { padding-top: 80px; }
 .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-bottom: 40px; }
 .footer-main .brand img { width: 56px; height: 56px; }
 .footer-links { display: flex; gap: 32px; flex-wrap: wrap; }
+.footer-social { padding-bottom: 24px; }
 .footer-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; color: var(--color-text-secondary); }
+.footer-social a { gap: 8px; }
+.footer-social a:hover, .footer-social a:focus-visible { color: var(--color-text-primary); }
+.social-icon { display: block; width: 20px; height: 20px; flex-shrink: 0; }
 .footer-meta { display: flex; justify-content: space-between; gap: 24px; border-top: var(--border); padding-top: 24px; color: var(--color-muted); font-size: 11px; }
 .page-intro { padding-top: 168px; padding-bottom: 64px; }
 .page-intro h1 { max-width: 850px; margin-bottom: 32px; }

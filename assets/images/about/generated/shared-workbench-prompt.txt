@@ -1,9 +1,0 @@
-Generator: built-in image_gen
-
-Use case: photorealistic-natural
-Asset type: landscape 3:2 editorial photograph for a small 3D-printing studio website's 'The people behind the print' section.
-Primary request: A shared workbench. Two people's hands exploring a small 3D-printed object together, a printer softly blurred in the background, a few colourful prototypes, two coffee cups, natural window light. Intimate and believable, with no faces visible.
-Scene: a modest, tidy but lived-in home creative studio, warm pale wooden tabletop. One person's hands gently cradle a small blue 3D-printed geometric object while the other person touches its layered surface with one hand. Hands and object are the clear focal point. A few simple orange and blue printed prototypes and two understated ceramic coffee cups rest naturally on the workbench. An unbranded desktop FDM printer is recognizable but softly out of focus behind them.
-Composition: close candid photograph from slightly above workbench height, hands entering naturally from opposite sides; crop people at forearms, no heads or faces. Landscape 3:2, composition suitable for a rounded image card beside website text.
-Lighting and materials: soft natural side window light, warm neutral palette with restrained blue and orange accents, realistic skin texture, delicate visible filament layer lines, matte printed plastic, subtle wood grain. Gentle depth of field, quiet shared curiosity, understated editorial quality.
-Constraints: anatomically plausible hands and fingers, no faces, no text, no logos, no watermark, no synthetic glossy CGI aesthetic.

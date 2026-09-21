@@ -59,71 +59,34 @@
     ],
     "gallery": [
       {
-        "image": "assets/images/line-holder/photo-04.jpg",
-        "caption": "Front view",
-        "alt": "Orange masonry line holder, front view on white"
-      },
-      {
-        "image": "assets/images/line-holder/photo-06.jpg",
-        "caption": "Top view",
-        "alt": "Top view showing the rod opening, steel screw, and line guide"
-      },
-      {
-        "image": "assets/images/line-holder/generated/in-use/photo-01-professional.png",
+        "image": "assets/images/line-holder/generated/in-use/photo-01-professional.webp",
         "caption": "On the job",
         "alt": "Orange line holder mounted on a reinforcing rod beside paving edges",
-        "sourceImage": "assets/images/line-holder/photo-01.jpg",
         "editingNote": "AI-assisted professional edit of the original in-use photograph.",
         "featuredInUse": true,
         "colorVariants": {
-          "green": "assets/images/line-holder/generated/in-use/photo-01-professional-green.png",
-          "blue": "assets/images/line-holder/generated/in-use/photo-01-professional-blue.png",
-          "red": "assets/images/line-holder/generated/in-use/photo-01-professional-red.png",
-          "black": "assets/images/line-holder/generated/in-use/photo-01-professional-black.png",
-          "orange": "assets/images/line-holder/generated/in-use/photo-01-professional.png"
+          "green": "assets/images/line-holder/generated/in-use/photo-01-professional-green.webp",
+          "blue": "assets/images/line-holder/generated/in-use/photo-01-professional-blue.webp",
+          "red": "assets/images/line-holder/generated/in-use/photo-01-professional-red.webp",
+          "black": "assets/images/line-holder/generated/in-use/photo-01-professional-black.webp",
+          "orange": "assets/images/line-holder/generated/in-use/photo-01-professional.webp"
         },
         "colorAlt": "{color} line holder mounted on a reinforcing rod beside paving edges"
       },
       {
-        "image": "assets/images/line-holder/generated/in-use/photo-02-professional.png",
+        "image": "assets/images/line-holder/generated/in-use/photo-02-professional.webp",
         "caption": "Installed detail",
         "alt": "Angled view of the installed holder guiding a pink masonry line",
-        "sourceImage": "assets/images/line-holder/photo-02.jpg",
         "editingNote": "AI-assisted professional edit of the original in-use photograph.",
         "featuredInUse": true,
         "colorVariants": {
-          "green": "assets/images/line-holder/generated/in-use/photo-02-professional-green.png",
-          "blue": "assets/images/line-holder/generated/in-use/photo-02-professional-blue.png",
-          "red": "assets/images/line-holder/generated/in-use/photo-02-professional-red.png",
-          "black": "assets/images/line-holder/generated/in-use/photo-02-professional-black.png",
-          "orange": "assets/images/line-holder/generated/in-use/photo-02-professional.png"
+          "green": "assets/images/line-holder/generated/in-use/photo-02-professional-green.webp",
+          "blue": "assets/images/line-holder/generated/in-use/photo-02-professional-blue.webp",
+          "red": "assets/images/line-holder/generated/in-use/photo-02-professional-red.webp",
+          "black": "assets/images/line-holder/generated/in-use/photo-02-professional-black.webp",
+          "orange": "assets/images/line-holder/generated/in-use/photo-02-professional.webp"
         },
         "colorAlt": "Angled view of the {color} line holder guiding a pink masonry line"
-      },
-      {
-        "image": "assets/images/line-holder/photo-03.jpg",
-        "caption": "Line alignment",
-        "alt": "View from above of the mounted holder and masonry line"
-      },
-      {
-        "image": "assets/images/line-holder/photo-05.jpg",
-        "caption": "Front detail",
-        "alt": "Front view of the orange holder and black adjustment knob on a tabletop"
-      },
-      {
-        "image": "assets/images/line-holder/photo-07.jpg",
-        "caption": "Clamp detail",
-        "alt": "Top view of the holder with its steel screw and circular rod opening"
-      },
-      {
-        "image": "assets/images/line-holder/photo-08.jpg",
-        "caption": "Side angle",
-        "alt": "Side angle showing the toothed line guide and clamping mechanism"
-      },
-      {
-        "image": "assets/images/line-holder/photo-09.jpg",
-        "caption": "Our signature",
-        "alt": "Underside of the orange holder with the SI 3D PROJECT logo"
       }
     ],
     "colors": [
@@ -182,39 +145,39 @@
     ],
     "variants": {
       "studio": {
-        "green": "assets/images/line-holder/generated/colors/green.png",
-        "blue": "assets/images/line-holder/generated/colors/blue.png",
-        "red": "assets/images/line-holder/generated/colors/red.png",
-        "black": "assets/images/line-holder/generated/colors/black.png",
-        "orange": "assets/images/line-holder/generated/ads/studio.png"
+        "green": "assets/images/line-holder/generated/colors/green.webp",
+        "blue": "assets/images/line-holder/generated/colors/blue.webp",
+        "red": "assets/images/line-holder/generated/colors/red.webp",
+        "black": "assets/images/line-holder/generated/colors/black.webp",
+        "orange": "assets/images/line-holder/generated/ads/studio.webp"
       },
       "front": {
-        "green": "assets/images/line-holder/generated/colors/front/green.png",
-        "blue": "assets/images/line-holder/generated/colors/front/blue.png",
-        "red": "assets/images/line-holder/generated/colors/front/red.png",
-        "black": "assets/images/line-holder/generated/colors/front/black.png",
-        "orange": "assets/images/line-holder/generated/sides/front.png"
+        "green": "assets/images/line-holder/generated/colors/front/green.webp",
+        "blue": "assets/images/line-holder/generated/colors/front/blue.webp",
+        "red": "assets/images/line-holder/generated/colors/front/red.webp",
+        "black": "assets/images/line-holder/generated/colors/front/black.webp",
+        "orange": "assets/images/line-holder/generated/sides/front.webp"
       },
       "rear": {
-        "green": "assets/images/line-holder/generated/colors/rear/green.png",
-        "blue": "assets/images/line-holder/generated/colors/rear/blue.png",
-        "red": "assets/images/line-holder/generated/colors/rear/red.png",
-        "black": "assets/images/line-holder/generated/colors/rear/black.png",
-        "orange": "assets/images/line-holder/generated/sides/rear.png"
+        "green": "assets/images/line-holder/generated/colors/rear/green.webp",
+        "blue": "assets/images/line-holder/generated/colors/rear/blue.webp",
+        "red": "assets/images/line-holder/generated/colors/rear/red.webp",
+        "black": "assets/images/line-holder/generated/colors/rear/black.webp",
+        "orange": "assets/images/line-holder/generated/sides/rear.webp"
       },
       "left": {
-        "green": "assets/images/line-holder/generated/colors/left/green.png",
-        "blue": "assets/images/line-holder/generated/colors/left/blue.png",
-        "red": "assets/images/line-holder/generated/colors/left/red.png",
-        "black": "assets/images/line-holder/generated/colors/left/black.png",
-        "orange": "assets/images/line-holder/generated/sides/left.png"
+        "green": "assets/images/line-holder/generated/colors/left/green.webp",
+        "blue": "assets/images/line-holder/generated/colors/left/blue.webp",
+        "red": "assets/images/line-holder/generated/colors/left/red.webp",
+        "black": "assets/images/line-holder/generated/colors/left/black.webp",
+        "orange": "assets/images/line-holder/generated/sides/left.webp"
       },
       "right": {
-        "green": "assets/images/line-holder/generated/colors/right/green.png",
-        "blue": "assets/images/line-holder/generated/colors/right/blue.png",
-        "red": "assets/images/line-holder/generated/colors/right/red.png",
-        "black": "assets/images/line-holder/generated/colors/right/black.png",
-        "orange": "assets/images/line-holder/generated/sides/right.png"
+        "green": "assets/images/line-holder/generated/colors/right/green.webp",
+        "blue": "assets/images/line-holder/generated/colors/right/blue.webp",
+        "red": "assets/images/line-holder/generated/colors/right/red.webp",
+        "black": "assets/images/line-holder/generated/colors/right/black.webp",
+        "orange": "assets/images/line-holder/generated/sides/right.webp"
       }
     },
     "colorNote": "Color preview. Actual printed colors may vary.",

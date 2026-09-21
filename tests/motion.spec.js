@@ -128,10 +128,11 @@ test('anchors and product controls remain usable with motion enabled', async ({ 
   await expect(page.locator('html')).toHaveAttribute('data-motion', /desktop|mobile/);
   await expect(page.locator('.hero .split-line')).toHaveCount(0); // the entrance has finished moving the controls
   await page.getByRole('link', { name: 'Explore the line holder' }).click();
+  await settled(page); // wait for the anchor animation before clicking a moving control
   await page.getByRole('button', { name: 'Orange', exact: true }).click();
   await expect(page.locator('.carousel-viewport .is-selected')).toHaveAttribute('data-color-image', 'Orange');
   await page.getByRole('link', { name: 'Order', exact: true }).click();
-  await expect(page).toHaveURL(/products.html\?color=orange&lang=en$/);
+  await expect(page).toHaveURL(/products.en.html\?color=orange$/);
   await page.getByRole('link', { name: 'Product details', exact: true }).click();
   await expect(page.locator('#details h2')).toHaveCSS('opacity', '1');
   await settled(page); // the smooth anchor scroll has finished
@@ -147,7 +148,7 @@ test('anchors and product controls remain usable with motion enabled', async ({ 
   await page.getByRole('link', { name: /Poznaj naszą historię/ }).click();
   await settled(page);
   await expect(page.locator('#poczatek h2')).toBeInViewport();
-  await expect(page).toHaveURL(/about.html\?lang=pl#poczatek$/);
+  await expect(page).toHaveURL(/about.html#poczatek$/);
   expect(Math.abs((await page.locator('#poczatek').boundingBox()).y - 100)).toBeLessThan(3); // lands right under the header, ready to pin
 });
 

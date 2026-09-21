@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 
 test.beforeEach(async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.addInitScript(() => localStorage.setItem('si-language', 'en'));
+  await page.addInitScript(() => { if (!localStorage.getItem('si-language')) localStorage.setItem('si-language', 'en'); });
 });
 
 test('each finish opens its supplied marketplace; selection survives reload', async ({ page, context }) => {
@@ -46,7 +46,7 @@ test('installation gallery supports both professional photos, keyboard, swipe an
   const image = page.locator('[data-installation-gallery] img');
   const next = page.getByRole('button', { name: 'Next installation photo', exact: true });
   const manifest = JSON.parse(readFileSync(new URL('../dist/.vite/manifest.json', import.meta.url), 'utf8'));
-  const second = manifest['assets/images/line-holder/generated/in-use/photo-02-professional-green.png'].file;
+  const second = manifest['assets/images/line-holder/generated/in-use/photo-02-professional-green.webp'].file;
   await page.route(`**/${second}`, route => route.abort());
   await next.click();
   await expect(page.locator('.installation-error')).toContainText('could not load');
@@ -96,7 +96,7 @@ test('both installation angles follow every selected color and direct color link
   const manifest = JSON.parse(readFileSync(new URL('../dist/.vite/manifest.json', import.meta.url), 'utf8'));
   const image = page.locator('[data-installation-gallery] img');
   const next = page.getByRole('button', { name: 'Next installation photo', exact: true });
-  const expectedImage = (angle, color) => new RegExp('/' + manifest[`assets/images/line-holder/generated/in-use/photo-0${angle}-professional${color === 'orange' ? '' : '-' + color}.png`].file + '$');
+  const expectedImage = (angle, color) => new RegExp('/' + manifest[`assets/images/line-holder/generated/in-use/photo-0${angle}-professional${color === 'orange' ? '' : '-' + color}.webp`].file + '$');
   for (const color of ['green', 'blue', 'red', 'black', 'orange']) {
     await page.goto(`/products.html?color=${color}`);
     await expect(image).toHaveAttribute('src', expectedImage(1, color));
@@ -123,16 +123,16 @@ test('a slow installation photo cannot overwrite a newer color selection', async
   const image = page.locator('[data-installation-gallery] img');
   let release;
   const gate = new Promise(resolve => { release = resolve; });
-  await page.route('**/photo-01-professional-green-*.png', async route => {
+  await page.route('**/photo-01-professional-green-*.webp', async route => {
     await gate;
     await route.continue();
   });
-  const greenRequest = page.waitForRequest('**/photo-01-professional-green-*.png');
+  const greenRequest = page.waitForRequest('**/photo-01-professional-green-*.webp');
   await page.getByRole('button', { name: 'Green', exact: true }).click();
   await greenRequest;
   await page.getByRole('button', { name: 'Blue', exact: true }).click();
   await expect(image).toHaveAttribute('data-installation-color', 'blue');
-  const greenResponse = page.waitForResponse('**/photo-01-professional-green-*.png');
+  const greenResponse = page.waitForResponse('**/photo-01-professional-green-*.webp');
   release();
   await greenResponse;
   await page.getByRole('button', { name: 'Next installation photo', exact: true }).click();

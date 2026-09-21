@@ -4,11 +4,11 @@ import { readFileSync } from 'node:fs';
 // Functional/layout checks use the accessible static presentation; motion has its own suite.
 test.beforeEach(async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.addInitScript(() => localStorage.setItem('si-language', 'en'));
+  await page.addInitScript(() => { if (!localStorage.getItem('si-language')) localStorage.setItem('si-language', 'en'); });
 });
 
 const manifest = JSON.parse(readFileSync(new URL('../dist/.vite/manifest.json', import.meta.url), 'utf8'));
-const imagePath = (view, color) => '/' + manifest[`assets/images/line-holder/generated/colors/${view}/${color}.png`].file;
+const imagePath = (view, color) => '/' + manifest[`assets/images/line-holder/generated/colors/${view}/${color}.webp`].file;
 
 async function expectPhoto(page, color, view) {
   const image = page.locator('.carousel-viewport .is-selected');
@@ -32,7 +32,7 @@ test('home page: Studio Blue, CAD hero, order link and responsive sections', asy
     await expect(page.getByText('Cinematic', { exact: true })).toHaveCount(0);
     await expect(page.getByRole('button', { name: /conversation|talk/i })).toHaveCount(0);
     await expect(page.locator('.contact-email')).toHaveAttribute('href', 'mailto:studio@example.com');
-    await expect(page.locator('[data-product-order]')).toHaveAttribute('href', /products.html\?color=green&lang=en$/);
+    await expect(page.locator('[data-product-order]')).toHaveAttribute('href', /products.en.html\?color=green$/);
     await expect(page.locator('#details, [data-product-shop]')).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const visibleText = await page.locator('main').innerText();
@@ -127,7 +127,7 @@ test('order opens a real product page with the selected color; subpages work res
   await page.getByRole('button', { name: 'Red', exact: true }).click();
   await expectPhoto(page, 'Red', 'studio');
   await page.getByRole('link', { name: 'Order', exact: true }).click();
-  await expect(page).toHaveURL(/products.html\?color=red&lang=en$/);
+  await expect(page).toHaveURL(/products.en.html\?color=red$/);
   await expectPhoto(page, 'Red', 'studio');
   await page.reload();
   await expectPhoto(page, 'Red', 'studio');
@@ -138,9 +138,9 @@ test('order opens a real product page with the selected color; subpages work res
     for (const route of ['products.html', 'about.html']) {
       const lang = route === 'about.html' ? 'pl' : 'en';
       await page.goto('/' + route + '?lang=' + lang);
-      await expect(page).toHaveURL(new RegExp(route + '\\?lang=' + lang + '$'));
+      await expect(page).toHaveURL(new RegExp(route.replace('.html', lang === 'pl' ? '.html' : '.' + lang + '.html') + '$'));
       await expect(page.locator('h1')).toHaveCount(1);
-      await expect(page.locator('#navigation [aria-current="page"]')).toHaveAttribute('href', new RegExp(route + '\\?lang=' + lang + '$'));
+      await expect(page.locator('#navigation [aria-current="page"]')).toHaveAttribute('href', new RegExp(route.replace('.html', lang === 'pl' ? '.html' : '.' + lang + '.html') + '$'));
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
       const anchors = await page.locator('a[href^="#"]').evaluateAll(links => links.map(link => link.hash.slice(1)));
       for (const id of new Set(anchors)) await expect(page.locator(`[id="${id}"]`)).toHaveCount(1);

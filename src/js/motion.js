@@ -263,13 +263,15 @@ export function initMotion() {
         // A refresh during the browser's initial anchor scroll can cancel it.
         // Restore only an untouched initial deep link, never a visitor's scroll position.
         let interacted = false;
+        const initialHash = location.hash;
         const markInteraction = () => { interacted = true; };
         const interactionEvents = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
         interactionEvents.forEach(type => window.addEventListener(type, markInteraction, { passive: true, once: true }));
         const restoreAnchor = () => {
-          if (!active || interacted || !location.hash || scrollY >= 24) return;
+          if (!active || interacted || !initialHash || location.hash !== initialHash) return;
           try {
-            document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView({ behavior: 'instant', block: 'start' });
+            const target = document.getElementById(decodeURIComponent(initialHash.slice(1)));
+            (target?.closest('.pin-spacer') || target)?.scrollIntoView({ behavior: 'instant', block: 'start' });
             ScrollTrigger.update();
           } catch { /* An invalid fragment should not interrupt the page. */ }
         };

@@ -2,12 +2,11 @@ import products from '../data/products.json';
 
 // Explicit imports let Vite fingerprint every dynamically selected image.
 const images = import.meta.glob([
-  '../../assets/images/line-holder/photo-*.jpg',
-  '../../assets/images/line-holder/generated/colors/*.png',
-  '../../assets/images/line-holder/generated/colors/{front,rear,left,right}/*.png',
-  '../../assets/images/line-holder/generated/ads/studio.png',
-  '../../assets/images/line-holder/generated/sides/*.png',
-  '../../assets/images/line-holder/generated/in-use/*.png',
+  '../../assets/images/line-holder/generated/colors/*.webp',
+  '../../assets/images/line-holder/generated/colors/{front,rear,left,right}/*.webp',
+  '../../assets/images/line-holder/generated/ads/studio.webp',
+  '../../assets/images/line-holder/generated/sides/*.webp',
+  '../../assets/images/line-holder/generated/in-use/*.webp',
 ], { eager: true, query: '?url', import: 'default' });
 
 export const product = products.find(item => item.id === 'line-holder');

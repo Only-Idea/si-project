@@ -6,7 +6,7 @@ Rechecked after the white-background revision: all four pages pass at 320, 390, 
 
 White action labels have contrast ratios of 5.57:1 (Studio Blue), 6.06:1 (Soft Sage), and 5.68:1 (Warm Clay). Muted text on the three feature-card surfaces ranges from 4.84:1 to 4.86:1. Supporting text on white is 7.32:1.
 
-Current screenshots: `docs/previews/{blue,sage,clay}-{1440,390}.png` and corresponding `*-features-*.png` crops. The latter hide fixed navigation for clean section review. `light-*.png` contains the latest per-page captures. The original unprefixed page screenshots below document the earlier dark iteration.
+The historical palette-experiment screenshots (`docs/previews/`) were removed from the repository to keep it small; the Playwright suite regenerates screenshots into `test-results/` on demand.
 
 ## Initial dark-theme verification
 
@@ -38,7 +38,7 @@ These sample text pairs exceed 4.5:1. This is not a claim of a full accessibilit
 
 ## Saved visual references
 
-Desktop and mobile screenshots for each page are in `docs/previews/` with `-1440.png` and `-390.png` suffixes. The Home desktop/mobile and Products desktop screenshots were also inspected visually.
+Desktop and mobile screenshots for each page were captured during validation (no longer stored in the repository). The Home desktop/mobile and Products desktop screenshots were also inspected visually.
 
 Safari, Firefox, screen-reader testing, real-device testing, production performance, and integration testing remain later-phase work.
 
