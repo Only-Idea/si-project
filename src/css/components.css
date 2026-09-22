@@ -73,6 +73,11 @@ body:has(.palette-bar) .page-intro { padding-top: 80px; }
 .finish-orb:nth-child(1) { --orb: #faf9f6; left: calc(50% - 89px); top: 61px; z-index: 3; }
 .finish-orb:nth-child(2) { --orb: var(--color-art); left: calc(50% - 38px); top: 32px; z-index: 2; }
 .finish-orb:nth-child(3) { --orb: var(--color-art-deep); left: calc(50% + 12px); top: 71px; z-index: 4; }
+.contact-method { display: block; }
+.social-icon-art svg { width: 56px; height: 56px; color: var(--color-art-deep); }
+.contact-method:hover .social-icon-art svg { color: var(--color-accent); }
+.page-intro.contact-intro { padding-bottom: 104px; }
+.contact-section.contact-email-section { padding-block: 112px; }
 .section { padding-block: 112px; }
 .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 48px; }
 .section-heading h2 { max-width: 630px; }

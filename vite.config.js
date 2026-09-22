@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
           home: page('index.html'),
           about: page('about.html'),
           products: page('products.html'),
+          contact: page('contact.html'),
         },
       },
     },
