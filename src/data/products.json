@@ -145,39 +145,39 @@
     ],
     "variants": {
       "studio": {
-        "green": "assets/images/line-holder/generated/colors/green.webp",
-        "blue": "assets/images/line-holder/generated/colors/blue.webp",
-        "red": "assets/images/line-holder/generated/colors/red.webp",
-        "black": "assets/images/line-holder/generated/colors/black.webp",
-        "orange": "assets/images/line-holder/generated/ads/studio.webp"
+        "green": "assets/images/line-holder/generated/colors/green/studio.webp",
+        "blue": "assets/images/line-holder/generated/colors/blue/studio.webp",
+        "red": "assets/images/line-holder/generated/colors/red/studio.webp",
+        "black": "assets/images/line-holder/generated/colors/black/studio.webp",
+        "orange": "assets/images/line-holder/generated/colors/orange/studio.webp"
       },
       "front": {
-        "green": "assets/images/line-holder/generated/colors/front/green.webp",
-        "blue": "assets/images/line-holder/generated/colors/front/blue.webp",
-        "red": "assets/images/line-holder/generated/colors/front/red.webp",
-        "black": "assets/images/line-holder/generated/colors/front/black.webp",
-        "orange": "assets/images/line-holder/generated/sides/front.webp"
+        "green": "assets/images/line-holder/generated/colors/green/front.webp",
+        "blue": "assets/images/line-holder/generated/colors/blue/front.webp",
+        "red": "assets/images/line-holder/generated/colors/red/front.webp",
+        "black": "assets/images/line-holder/generated/colors/black/front.webp",
+        "orange": "assets/images/line-holder/generated/colors/orange/front.webp"
       },
       "rear": {
-        "green": "assets/images/line-holder/generated/colors/rear/green.webp",
-        "blue": "assets/images/line-holder/generated/colors/rear/blue.webp",
-        "red": "assets/images/line-holder/generated/colors/rear/red.webp",
-        "black": "assets/images/line-holder/generated/colors/rear/black.webp",
-        "orange": "assets/images/line-holder/generated/sides/rear.webp"
+        "green": "assets/images/line-holder/generated/colors/green/rear.webp",
+        "blue": "assets/images/line-holder/generated/colors/blue/rear.webp",
+        "red": "assets/images/line-holder/generated/colors/red/rear.webp",
+        "black": "assets/images/line-holder/generated/colors/black/rear.webp",
+        "orange": "assets/images/line-holder/generated/colors/orange/rear.webp"
       },
       "left": {
-        "green": "assets/images/line-holder/generated/colors/left/green.webp",
-        "blue": "assets/images/line-holder/generated/colors/left/blue.webp",
-        "red": "assets/images/line-holder/generated/colors/left/red.webp",
-        "black": "assets/images/line-holder/generated/colors/left/black.webp",
-        "orange": "assets/images/line-holder/generated/sides/left.webp"
+        "green": "assets/images/line-holder/generated/colors/green/left.webp",
+        "blue": "assets/images/line-holder/generated/colors/blue/left.webp",
+        "red": "assets/images/line-holder/generated/colors/red/left.webp",
+        "black": "assets/images/line-holder/generated/colors/black/left.webp",
+        "orange": "assets/images/line-holder/generated/colors/orange/left.webp"
       },
       "right": {
-        "green": "assets/images/line-holder/generated/colors/right/green.webp",
-        "blue": "assets/images/line-holder/generated/colors/right/blue.webp",
-        "red": "assets/images/line-holder/generated/colors/right/red.webp",
-        "black": "assets/images/line-holder/generated/colors/right/black.webp",
-        "orange": "assets/images/line-holder/generated/sides/right.webp"
+        "green": "assets/images/line-holder/generated/colors/green/right.webp",
+        "blue": "assets/images/line-holder/generated/colors/blue/right.webp",
+        "red": "assets/images/line-holder/generated/colors/red/right.webp",
+        "black": "assets/images/line-holder/generated/colors/black/right.webp",
+        "orange": "assets/images/line-holder/generated/colors/orange/right.webp"
       }
     },
     "colorNote": "Color preview. Actual printed colors may vary.",

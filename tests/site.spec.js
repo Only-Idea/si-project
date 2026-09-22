@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 const manifest = JSON.parse(readFileSync(new URL('../dist/.vite/manifest.json', import.meta.url), 'utf8'));
-const imagePath = (view, color) => '/' + manifest[`assets/images/line-holder/generated/colors/${view}/${color}.webp`].file;
+const imagePath = (view, color) => '/' + manifest[`assets/images/line-holder/generated/colors/${color}/${view}.webp`].file;
 
 async function expectPhoto(page, color, view) {
   const image = page.locator('.carousel-viewport .is-selected');

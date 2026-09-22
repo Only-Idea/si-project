@@ -2,10 +2,7 @@ import products from '../data/products.json';
 
 // Explicit imports let Vite fingerprint every dynamically selected image.
 const images = import.meta.glob([
-  '../../assets/images/line-holder/generated/colors/*.webp',
-  '../../assets/images/line-holder/generated/colors/{front,rear,left,right}/*.webp',
-  '../../assets/images/line-holder/generated/ads/studio.webp',
-  '../../assets/images/line-holder/generated/sides/*.webp',
+  '../../assets/images/line-holder/generated/colors/{green,blue,red,black,orange}/*.webp',
   '../../assets/images/line-holder/generated/in-use/*.webp',
 ], { eager: true, query: '?url', import: 'default' });
 
