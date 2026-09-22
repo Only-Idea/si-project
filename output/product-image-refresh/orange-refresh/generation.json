@@ -1,0 +1,34 @@
+{
+  "tool": "built-in image_gen",
+  "items": [
+    {
+      "view": "front",
+      "prompt": "Use case: precise-object-edit. Asset: orange product front catalogue cutout. Edit the supplied photograph with strict geometry preservation. Change ONLY the green plastic body to vivid orange ABS, target midtone #FF7900. Retain the same physical object, exact silhouette, dimensions, pose, camera angle, perspective, framing, part positions, extrusion depth, print texture, highlights and shadows. Keep black knob and silver threaded screw unchanged. Preserve the front view, black knob with visible upper webs, slim comb teeth, circle and tabs. Remove only the white background to genuine alpha transparency, including all holes and spaces between teeth. No opaque background, no checkerboard pattern, no cast ground shadow, no extra elements, no green remnants. Output a single square transparent PNG cutout with the same product scale and placement. This is a color variant of the exact reference, NOT a redesign or recreation.",
+      "references": [
+        "/Users/kacper/Desktop/si-project/output/product-image-refresh/orange-refresh/references/green-front.png"
+      ],
+      "generated": "/Users/kacper/.codex/generated_images/01a0c6ea-cc6e-7280-b392-f60fea9d1e5d/exec-ce72831f-a78e-4082-91cd-4eb29afe27ea.png"
+    },
+    {
+      "view": "rear",
+      "prompt": "Use case: precise-object-edit. Asset: orange product rear catalogue cutout. Edit the supplied photograph with strict geometry preservation. Change ONLY the green plastic body to vivid orange ABS, target midtone #FF7900. Retain the same physical object, exact silhouette, dimensions, pose, camera angle, perspective, framing, part positions, extrusion depth, print texture, highlights and shadows. Keep black knob and silver threaded screw unchanged. Keep the white SI 3D PROJECT logo and its nozzle/cube icon exactly as shown. Preserve the flat trapezoidal bottom edge. NO comb, teeth or ledge on this rear view. Remove only the white background to genuine alpha transparency, including all holes and spaces between teeth. No opaque background, no checkerboard pattern, no cast ground shadow, no extra elements, no green remnants. Output a single square transparent PNG cutout with the same product scale and placement. This is a color variant of the exact reference, NOT a redesign or recreation.",
+      "references": [
+        "/Users/kacper/Desktop/si-project/output/product-image-refresh/orange-refresh/references/green-rear.png"
+      ],
+      "generated": "/Users/kacper/.codex/generated_images/01a0c6ea-cc6e-7280-b392-f60fea9d1e5d/exec-51fbc743-a544-4ec5-9a02-42ae5866b028.png"
+    },
+    {
+      "view": "left",
+      "prompt": "Use case: precise-object-edit. Asset: orange product left catalogue cutout. Edit the supplied photograph with strict geometry preservation. Change ONLY the green plastic body to vivid orange ABS, target midtone #FF7900. Retain the same physical object, exact silhouette, dimensions, pose, camera angle, perspective, framing, part positions, extrusion depth, print texture, highlights and shadows. Keep black knob and silver threaded screw unchanged. Preserve the upright side perspective, the substantial collar projection, thin horizontal toothed ledge projecting LEFT, and the black knob's underside visible from below. Do not rotate the viewpoint, straighten perspective, thicken the foot or alter the knob. Remove only the white background to genuine alpha transparency, including all holes and spaces between teeth. No opaque background, no checkerboard pattern, no cast ground shadow, no extra elements, no green remnants. Output a single square transparent PNG cutout with the same product scale and placement. This is a color variant of the exact reference, NOT a redesign or recreation.",
+      "references": [
+        "/Users/kacper/Desktop/si-project/output/product-image-refresh/orange-refresh/references/green-left.png"
+      ],
+      "generated": "/Users/kacper/.codex/generated_images/01a0c6ea-cc6e-7280-b392-f60fea9d1e5d/exec-1725b248-2a80-424f-ae47-0cf45c9d72a1.png"
+    }
+  ],
+  "right": {
+    "source": "left.webp",
+    "operation": "horizontal mirror",
+    "authorization": "User requested mirrored upright left views for right-side images."
+  }
+}
