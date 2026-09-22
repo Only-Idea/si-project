@@ -6,6 +6,25 @@ export function renderColorViewer(first = product.colors[0], isProductPage = fal
   const purchase = purchaseForColor(first);
   return `
     <figure class="color-stage" role="region" aria-roledescription="${t('gallery.role')}" aria-label="${t('gallery.label')}">
+      <div class="product-view-switch" role="group" aria-label="${t('model.view')}">
+        <button type="button" data-product-view="photos" aria-pressed="true">${t('model.photos')}</button>
+        <button type="button" data-product-view="3d" aria-pressed="false">3D · 360°</button>
+      </div>
+      <div class="product-model" data-product-model data-lenis-prevent hidden>
+        <div class="product-model-canvas" data-model-canvas></div>
+        <p class="product-model-status" data-model-status role="status"></p>
+        <button type="button" class="model-retry" data-model-retry hidden>${t('model.retry')}</button>
+        <div class="product-model-toolbar" data-model-toolbar hidden>
+          <p>${t('model.hint')}</p>
+          <div class="model-actions">
+            <button type="button" data-model-action="left" aria-label="${t('model.left')}">↶</button>
+            <button type="button" data-model-action="right" aria-label="${t('model.right')}">↷</button>
+            <button type="button" data-model-action="in" aria-label="${t('model.in')}">+</button>
+            <button type="button" data-model-action="out" aria-label="${t('model.out')}">−</button>
+            <button type="button" data-model-action="reset">${t('model.reset')}</button>
+          </div>
+        </div>
+      </div>
       <div class="carousel-viewport" tabindex="0" aria-label="${t('gallery.keyboard')}">
         <img data-color-image="${first.name}" data-view="studio" class="is-selected" src="${variantUrl(first.name, 'studio')}" alt="${t('gallery.alt', { color: colorName(first), view: t('view.studio') })}" width="1536" height="1024" loading="lazy" draggable="false">
       </div>

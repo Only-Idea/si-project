@@ -2,6 +2,7 @@ import { t, colorName, localizedUrl } from './i18n.js';
 import { product, variantUrl } from './catalogue.js';
 import { renderColorViewer } from './color-viewer-template.js';
 import { updateProductPurchase } from './product-purchase.js';
+import { initProductModel } from './product-model.js';
 
 export function initColorViewers() {
   document.querySelectorAll('[data-color-preview]').forEach(viewer => {
@@ -9,6 +10,7 @@ export function initColorViewers() {
     const colorId = new URLSearchParams(location.search).get('color');
     const first = (isProductPage && product.colors.find(color => color.id === colorId)) || product.colors[0];
     viewer.innerHTML = renderColorViewer(first, isProductPage);
+    const model = initProductModel(viewer, first);
     const viewport = viewer.querySelector('.carousel-viewport');
     const images = [...viewport.querySelectorAll('img')];
     const buttons = [...viewer.querySelectorAll('[data-product-color]')];
@@ -74,6 +76,7 @@ export function initColorViewers() {
         activeColor = color;
         activeIndex = index;
         const selected = product.colors.find(item => item.name === color);
+        model.setColor(selected);
         if (orderLink) orderLink.href = localizedUrl(`products.html?color=${selected.id}`);
         if (isProductPage) {
           updateProductPurchase(selected);

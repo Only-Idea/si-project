@@ -3,7 +3,7 @@
 .hero-grid { grid-template-columns: 1fr 1.18fr; gap: 36px; }
 .hero h1 { font-size: clamp(42px, 4.6vw, 64px); }
 .design-hero { margin: 0 -32px 0 0; }
-.design-hero img { width: 100%; height: auto; max-height: none; aspect-ratio: 4 / 3; object-fit: cover; mix-blend-mode: normal; border: 1px solid #e8eaef; border-radius: 24px; box-shadow: 0 24px 60px #1734570a; }
+.design-hero img { width: 100%; height: auto; max-height: none; object-fit: contain; mix-blend-mode: normal; border: 1px solid #e8eaef; border-radius: 24px; box-shadow: 0 24px 60px #1734570a; }
 .design-hero .image-note { margin-top: 20px; font-size: 9px; letter-spacing: .08em; }
 .product-details { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .in-use-photo { margin: 0; }

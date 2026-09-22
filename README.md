@@ -25,10 +25,11 @@ Tests use installed Google Chrome on macOS when available. Otherwise run `npx pl
 
 ## Current experience
 
-- Home introduces the product with a CAD-style hero, features and color carousel. Its Order button opens the dedicated product page, preserving the selected color.
+- Home introduces the product with the owner's CAD screenshot (`assets/images/line-holder/cad-design.jpeg`), features and color carousel. Its Order button opens the dedicated product page, preserving the selected color.
 - The product page contains its own carousel, in-use photograph, specifications, package contents, setup guidance and color-specific purchase links. The About page tells Iza and Sebastian’s story in four chapters, with chapter reveals, reading progress and subtle desktop parallax. All three pages are available in Polish, English and German.
 - Fixed Studio Blue branding, independent of the five product finishes: green `#00AE42`, blue `#489FDF`, red `#D32941` black `#000000`, and original orange (UI swatch `#FF7900`).
 - Five carousel photos per color: studio, front, rear, left and right. Arrows, position dots, swipe and keyboard navigation replace named side selectors. Text and controls retain their position when photos change.
+- The home and product galleries’ **3D · 360°** button opens the supplied upright model on demand. Drag to rotate, scroll or pinch to zoom, or use the rotation, zoom and reset buttons. The selected finish colors the body while the black knob and metal hardware retain their materials.
 - Contact links open `mailto:studio@example.com`; no enquiry forms or catalogue.
 - `products.html` and `about.html` are real subpages, linked from the shared navigation.
 
@@ -42,7 +43,23 @@ Copy lives in `src/data/translations.json`, with natural wording for each langua
 
 `index.html`, `products.html` and `about.html` contain Home, Product and About. `src/css/` holds styling and design tokens. `src/js/main.js` initializes navigation and the product carousel. `catalogue.js` resolves Vite-managed image URLs, `product-colors.js` handles decoded image switching and loading failures, and `color-viewer-template.js` provides carousel markup. Product facts and variant mappings live in `src/data/products.json`.
 
-The build includes 25 live color/view images, the two professional installation photos, the five-color campaign image and the CAD-style hero. The hero and campaign image are AI-generated illustrations, not software screenshots or editable CAD models. Product recolors are visualizations. The installation photos are professional AI-assisted edits of the owner’s original photographs, which are no longer kept in the repository.
+The build includes 25 live color/view images, the two professional installation photos, the five-color campaign image and the owner's CAD screenshot in the home hero. The five studio views are rendered directly from the supplied OBJ; their geometry matches the interactive model. The other carousel angles and campaign image remain earlier generated illustrations. The installation photos are professional AI-assisted edits of the owner’s original photographs, which are no longer kept in the repository.
+
+### Studio product images
+
+`npm run render:products` renders five 1536 × 1024 WebP images to `test-results/product-renders/`. Add `-- --preview` for a faster orange-only lighting check in its `preview/` subfolder, or `-- --apply` to replace the five catalogue studio assets after the full batch finishes. The offline renderer starts its own server on port 5180 and uses the same local Chrome/Playwright browser setup as the tests.
+
+`scripts/render-product-scene.js` uses the supplied OBJ/MTL without reshaping or simplifying triangles. It rotates the product upright, applies a uniform scale, and adds studio area lights, a neutral pedestal, steel hardware, and procedural ABS surface shading. Surface texture and finish are illustrative; the supplied geometry remains authoritative. All finishes share one camera and scene. Final images use 512 path-traced samples at 1.5× resolution, edge-preserving noise reduction, then downsampling to the website size.
+
+The offline renderer pins Three.js r181 and its path-tracer dependencies separately from the interactive website’s Three.js version. These development dependencies and rendering scripts are not included in the production JavaScript bundle. OBJ meshes with multiple materials are split by existing triangle groups for correct path-tracer material assignment.
+
+### Interactive product model
+
+The OBJ is stored upright with Y pointing up and its base at Y=0. Its vertices and normals were rotated together from the original CAD orientation, preserving dimensions and topology. The viewer opens and resets to a standing three-quarter view; the offline renderer uses the same upright asset without an extra rotation.
+
+The supplied OBJ and MTL live together in `public/models/line-holder/` and are copied to the production build. The OBJ’s `mtllib` reference points to `model.mtl`. `product-model.js` handles the photo/3D switch and lazy loading; `product-model-scene.js` uses Three.js OBJ/MTL loaders and OrbitControls. The engine and approximately 10 MB model download only when the visitor opens 3D. Rendering happens on interaction or resize, with no automatic spinning.
+
+The original green material (`Farba_—_emalia,_połysk_(zielona)`) identifies the recolorable body. Keep that mapping in sync when replacing the model. Arrow keys rotate the focused canvas, plus/minus zoom, and Home resets the view. Loading errors or unavailable WebGL show a retry message; the Photos button keeps the original gallery accessible. Labels are translated into Polish, English and German. `tests/product-model.spec.js` checks actual canvas changes, color synchronization, responsive sizing, lazy downloads and failure recovery.
 
 ## Status
 
