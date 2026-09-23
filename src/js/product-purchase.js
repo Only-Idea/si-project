@@ -13,7 +13,7 @@ export function purchaseForColor(color) {
     note: t(redirectedFinish ? 'purchase.redirectNote' : 'purchase.note', values),
     external: true,
   } : {
-    href: `mailto:studio@example.com?subject=${encodeURIComponent(t('purchase.subject', values))}`,
+    href: `mailto:si3dproject@gmail.com?subject=${encodeURIComponent(t('purchase.subject', values))}`,
     label: t('purchase.emailLabel'),
     note: t('purchase.emailNote', values),
     external: false,

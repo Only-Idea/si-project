@@ -78,11 +78,13 @@ export function renderSeoPage(html, { page, language = 'pl', settings }) {
   const meta = socialMetadata(settings, page, language);
   // Replacing existing metadata makes the transform safe to apply to built HTML again.
   head.childNodes = head.childNodes.filter(node => !(
-    node.tagName === 'meta' && (attr(node, 'name') === 'robots' || /^(og:|twitter:)/.test(attr(node, 'property') || attr(node, 'name') || '')) ||
+    node.tagName === 'meta' && (['robots', 'author', 'date'].includes(attr(node, 'name')) || /^(og:|twitter:)/.test(attr(node, 'property') || attr(node, 'name') || '')) ||
     node.tagName === 'link' && (attr(node, 'rel') === 'canonical' || attr(node, 'hreflang'))
   ));
   const tags = [
     `<meta name="robots" content="${settings.indexable ? 'index, follow, max-image-preview:large' : 'noindex, nofollow'}">`,
+    '<meta name="author" content="SI 3D PROJECT">',
+    `<meta name="date" content="${new Date().toISOString().slice(0, 10)}">`,
     `<link rel="canonical" href="${escape(meta.url)}">`,
     ...languages.map(lang => `<link rel="alternate" hreflang="${lang}" href="${escape(canonicalUrl(settings, page, lang))}">`),
     `<link rel="alternate" hreflang="x-default" href="${escape(canonicalUrl(settings, page, 'pl'))}">`,
