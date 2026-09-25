@@ -183,16 +183,7 @@
     "gallery.role": "karuzela zdjęć",
     "model.view": "Widok produktu",
     "model.photos": "Zdjęcia",
-    "model.retry": "Spróbuj ponownie",
-    "model.hint": "Przeciągnij, aby obrócić · Przybliż kółkiem lub gestem",
-    "model.left": "Obróć w lewo",
-    "model.right": "Obróć w prawo",
-    "model.in": "Przybliż",
-    "model.out": "Oddal",
-    "model.reset": "Resetuj",
-    "model.keyboard": "Interaktywny model 3D. Strzałki obracają, plus i minus przybliżają i oddalają, a Home resetuje widok.",
-    "model.error": "Nie udało się wczytać widoku 3D. Spróbuj ponownie lub wybierz Zdjęcia.",
-    "model.loading": "Wczytywanie modelu 3D…"
+    "model.alt": "Obracający się uchwyt do sznurka brukarskiego, widok 360°"
   },
   "en": {
     "nav.home": "Home",
@@ -378,16 +369,7 @@
     "gallery.role": "carousel",
     "model.view": "Product view",
     "model.photos": "Photos",
-    "model.retry": "Try again",
-    "model.hint": "Drag to rotate · Scroll or pinch to zoom",
-    "model.left": "Rotate left",
-    "model.right": "Rotate right",
-    "model.in": "Zoom in",
-    "model.out": "Zoom out",
-    "model.reset": "Reset",
-    "model.keyboard": "Interactive 3D product. Use arrow keys to rotate, plus and minus to zoom, and Home to reset.",
-    "model.error": "The 3D view could not load. Try again or switch to Photos.",
-    "model.loading": "Loading 3D model…"
+    "model.alt": "Line holder rotating 360°"
   },
   "de": {
     "nav.home": "Startseite",
@@ -573,15 +555,6 @@
     "gallery.role": "Bilderkarussell",
     "model.view": "Produktansicht",
     "model.photos": "Fotos",
-    "model.retry": "Erneut versuchen",
-    "model.hint": "Ziehen zum Drehen · Scrollen oder Aufziehen zum Zoomen",
-    "model.left": "Nach links drehen",
-    "model.right": "Nach rechts drehen",
-    "model.in": "Vergrößern",
-    "model.out": "Verkleinern",
-    "model.reset": "Zurücksetzen",
-    "model.keyboard": "Interaktives 3D-Modell. Pfeiltasten zum Drehen, Plus und Minus zum Zoomen, Pos1 zum Zurücksetzen.",
-    "model.error": "Die 3D-Ansicht konnte nicht geladen werden. Bitte erneut versuchen oder Fotos wählen.",
-    "model.loading": "3D-Modell wird geladen…"
+    "model.alt": "Schnurhalter in 360°-Drehung"
   }
 }

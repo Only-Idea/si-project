@@ -49,17 +49,13 @@ The build includes 25 live color/view images, the two professional installation 
 
 `npm run render:products` renders five 1536 × 1024 WebP images to `test-results/product-renders/`. Add `-- --preview` for a faster orange-only lighting check in its `preview/` subfolder, or `-- --apply` to replace the five catalogue studio assets after the full batch finishes. The offline renderer starts its own server on port 5180 and uses the same local Chrome/Playwright browser setup as the tests.
 
-`scripts/render-product-scene.js` uses the supplied OBJ/MTL without reshaping or simplifying triangles. It rotates the product upright, applies a uniform scale, and adds studio area lights, a neutral pedestal, steel hardware, and procedural ABS surface shading. Surface texture and finish are illustrative; the supplied geometry remains authoritative. All finishes share one camera and scene. Final images use 512 path-traced samples at 1.5× resolution, edge-preserving noise reduction, then downsampling to the website size.
+`scripts/render-product-scene.js` used the supplied OBJ/MTL (no longer in the repo; restore `public/models/line-holder/` to re-render) without reshaping or simplifying triangles. It rotates the product upright, applies a uniform scale, and adds studio area lights, a neutral pedestal, steel hardware, and procedural ABS surface shading. Surface texture and finish are illustrative; the supplied geometry remains authoritative. All finishes share one camera and scene. Final images use 512 path-traced samples at 1.5× resolution, edge-preserving noise reduction, then downsampling to the website size.
 
 The offline renderer pins Three.js r181 and its path-tracer dependencies separately from the interactive website’s Three.js version. These development dependencies and rendering scripts are not included in the production JavaScript bundle. OBJ meshes with multiple materials are split by existing triangle groups for correct path-tracer material assignment.
 
-### Interactive product model
+### 360° product view
 
-The OBJ is stored upright with Y pointing up and its base at Y=0. Its vertices and normals were rotated together from the original CAD orientation, preserving dimensions and topology. The viewer opens and resets to a standing three-quarter view; the offline renderer uses the same upright asset without an extra rotation.
-
-The supplied OBJ and MTL live together in `public/models/line-holder/` and are copied to the production build. The OBJ’s `mtllib` reference points to `model.mtl`. `product-model.js` handles the photo/3D switch and lazy loading; `product-model-scene.js` uses Three.js OBJ/MTL loaders and OrbitControls. The engine and approximately 10 MB model download only when the visitor opens 3D. Rendering happens on interaction or resize, with no automatic spinning.
-
-The original green material (`Farba_—_emalia,_połysk_(zielona)`) identifies the recolorable body. Keep that mapping in sync when replacing the model. Arrow keys rotate the focused canvas, plus/minus zoom, and Home resets the view. Loading errors or unavailable WebGL show a retry message; the Photos button keeps the original gallery accessible. Labels are translated into Polish, English and German. `tests/product-model.spec.js` checks actual canvas changes, color synchronization, responsive sizing, lazy downloads and failure recovery.
+`assets/images/line-holder/model-360.mp4` is a rotating video (H.264, muted, looping; converted from the original 12 MB GIF) of the green holder. `product-model.js` handles the Photos / 360° switch and requests the video (~120 KB) only when the visitor first opens it. It does not change with the selected color.
 
 ## Status
 

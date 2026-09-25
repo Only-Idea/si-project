@@ -10,7 +10,8 @@ export function initColorViewers() {
     const colorId = new URLSearchParams(location.search).get('color');
     const first = (isProductPage && product.colors.find(color => color.id === colorId)) || product.colors[0];
     viewer.innerHTML = renderColorViewer(first, isProductPage);
-    const model = initProductModel(viewer, first);
+    const model = initProductModel(viewer);
+    model.setColor(first);
     const viewport = viewer.querySelector('.carousel-viewport');
     const images = [...viewport.querySelectorAll('img')];
     const buttons = [...viewer.querySelectorAll('[data-product-color]')];
